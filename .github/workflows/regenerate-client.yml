@@ -45,11 +45,12 @@ jobs:
           # Install openapi-python-client
           pip install openapi-python-client
 
-          # Generate client
+          # Generate client (overwrite existing)
           openapi-python-client generate \
             --path specs/openapi.yaml \
             --output-path . \
-            --config openapi-generator-config.yaml
+            --config openapi-generator-config.yaml \
+            --overwrite
 
           echo "✓ Client generated"
 
