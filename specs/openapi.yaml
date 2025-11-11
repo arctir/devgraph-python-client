@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: Devgraph AI API
   description: The Devgraph AI ontology engine and entity management API
-  version: 1.0.0-beta.6
+  version: 1.0.0-beta.7
 paths:
   /api/v1/entities/definitions:
     get:
@@ -2098,7 +2098,7 @@ paths:
       tags:
       - models
       summary: Delete Model
-      description: Delete a specific model configuration by name.
+      description: Soft delete an AI model configuration by name
       operationId: delete_model
       security:
       - OAuth2PasswordBearer: []
