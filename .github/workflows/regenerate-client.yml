@@ -4,16 +4,16 @@ on:
   workflow_dispatch:
     inputs:
       spec_version:
-        description: 'API Spec Version'
+        description: "API Spec Version"
         required: true
         type: string
       spec_commit:
-        description: 'Devgraph commit SHA that triggered this'
+        description: "Devgraph commit SHA that triggered this"
         required: true
         type: string
   # Optional: Also trigger on schedule to check for missed updates
   schedule:
-    - cron: '0 2 * * *'  # Daily at 2am UTC
+    - cron: "0 2 * * *" # Daily at 2am UTC
 
 jobs:
   regenerate:
@@ -24,7 +24,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       - name: Install Poetry
         uses: snok/install-poetry@v1
@@ -94,9 +94,6 @@ jobs:
           Auto-generated from devgraph@${{ inputs.spec_commit }}
           Spec URL: https://github.com/arctir/devgraph-api/tree/v${{ inputs.spec_version }}
 
-          🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-          Co-Authored-By: Claude <noreply@anthropic.com>
           EOF
           )"
             git push origin main
@@ -112,7 +109,15 @@ jobs:
 
             # Build package
             poetry build
-            echo "✓ Built package (publishing to GitHub Packages requires manual setup)"
+
+            # Publish to GitHub Packages
+            pip install twine
+            TWINE_USERNAME=${{ github.actor }} \
+            TWINE_PASSWORD=${{ secrets.GITHUB_TOKEN }} \
+            TWINE_REPOSITORY_URL=https://pypi.pkg.github.com/${{ github.repository_owner }}/${{ github.event.repository.name }} \
+            twine upload --repository-url $TWINE_REPOSITORY_URL dist/*
+
+            echo "✓ Package built and published"
           else
             echo "No changes to commit"
           fi
