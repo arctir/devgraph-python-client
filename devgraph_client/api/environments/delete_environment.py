@@ -61,13 +61,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Environment
 
-     Soft delete an environment.
-
-    This marks the environment as deleted (sets deleted_at timestamp) which triggers
-    the Kubernetes controller to clean up all associated resources (namespace, database, etc.).
-    The environment record is retained for the configured retention period for potential recovery.
-
-    For permanent GDPR-compliant deletion, use the Admin API endpoint.
+     Delete an environment with grace period for recovery
 
     Args:
         env_id (UUID):
@@ -98,13 +92,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Environment
 
-     Soft delete an environment.
-
-    This marks the environment as deleted (sets deleted_at timestamp) which triggers
-    the Kubernetes controller to clean up all associated resources (namespace, database, etc.).
-    The environment record is retained for the configured retention period for potential recovery.
-
-    For permanent GDPR-compliant deletion, use the Admin API endpoint.
+     Delete an environment with grace period for recovery
 
     Args:
         env_id (UUID):
@@ -130,13 +118,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Environment
 
-     Soft delete an environment.
-
-    This marks the environment as deleted (sets deleted_at timestamp) which triggers
-    the Kubernetes controller to clean up all associated resources (namespace, database, etc.).
-    The environment record is retained for the configured retention period for potential recovery.
-
-    For permanent GDPR-compliant deletion, use the Admin API endpoint.
+     Delete an environment with grace period for recovery
 
     Args:
         env_id (UUID):
@@ -165,13 +147,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Environment
 
-     Soft delete an environment.
-
-    This marks the environment as deleted (sets deleted_at timestamp) which triggers
-    the Kubernetes controller to clean up all associated resources (namespace, database, etc.).
-    The environment record is retained for the configured retention period for potential recovery.
-
-    For permanent GDPR-compliant deletion, use the Admin API endpoint.
+     Delete an environment with grace period for recovery
 
     Args:
         env_id (UUID):

@@ -71,7 +71,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | MCPEndpointResponse]:
     """Create Mcpendpoint
 
-     Create a new MCP Endpoint configuration.
+     Create a new MCP endpoint configuration
 
     Args:
         body (MCPEndpointCreate):
@@ -102,7 +102,7 @@ def sync(
 ) -> Any | HTTPValidationError | MCPEndpointResponse | None:
     """Create Mcpendpoint
 
-     Create a new MCP Endpoint configuration.
+     Create a new MCP endpoint configuration
 
     Args:
         body (MCPEndpointCreate):
@@ -128,7 +128,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | MCPEndpointResponse]:
     """Create Mcpendpoint
 
-     Create a new MCP Endpoint configuration.
+     Create a new MCP endpoint configuration
 
     Args:
         body (MCPEndpointCreate):
@@ -157,7 +157,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | MCPEndpointResponse | None:
     """Create Mcpendpoint
 
-     Create a new MCP Endpoint configuration.
+     Create a new MCP endpoint configuration
 
     Args:
         body (MCPEndpointCreate):

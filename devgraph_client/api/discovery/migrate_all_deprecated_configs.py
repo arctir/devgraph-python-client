@@ -78,7 +78,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | MigrationResultsResponse]:
     """Migrate All Deprecated Configs
 
-     Batch migrate all configs using deprecated versions.
+     Batch migrate all configs using deprecated versions
 
     Args:
         environment_id (None | Unset | UUID):
@@ -109,7 +109,7 @@ def sync(
 ) -> Any | HTTPValidationError | MigrationResultsResponse | None:
     """Migrate All Deprecated Configs
 
-     Batch migrate all configs using deprecated versions.
+     Batch migrate all configs using deprecated versions
 
     Args:
         environment_id (None | Unset | UUID):
@@ -135,7 +135,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | MigrationResultsResponse]:
     """Migrate All Deprecated Configs
 
-     Batch migrate all configs using deprecated versions.
+     Batch migrate all configs using deprecated versions
 
     Args:
         environment_id (None | Unset | UUID):
@@ -164,7 +164,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | MigrationResultsResponse | None:
     """Migrate All Deprecated Configs
 
-     Batch migrate all configs using deprecated versions.
+     Batch migrate all configs using deprecated versions
 
     Args:
         environment_id (None | Unset | UUID):

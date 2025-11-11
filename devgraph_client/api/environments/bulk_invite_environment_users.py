@@ -79,7 +79,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[EnvironmentUserResponse]]:
     """Bulk Invite Environment Users
 
-     Bulk invite multiple users to an environment (organization).
+     Bulk invite multiple users to an environment
 
     Args:
         environment_id (UUID):
@@ -113,7 +113,7 @@ def sync(
 ) -> Any | HTTPValidationError | list[EnvironmentUserResponse] | None:
     """Bulk Invite Environment Users
 
-     Bulk invite multiple users to an environment (organization).
+     Bulk invite multiple users to an environment
 
     Args:
         environment_id (UUID):
@@ -142,7 +142,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | list[EnvironmentUserResponse]]:
     """Bulk Invite Environment Users
 
-     Bulk invite multiple users to an environment (organization).
+     Bulk invite multiple users to an environment
 
     Args:
         environment_id (UUID):
@@ -174,7 +174,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | list[EnvironmentUserResponse] | None:
     """Bulk Invite Environment Users
 
-     Bulk invite multiple users to an environment (organization).
+     Bulk invite multiple users to an environment
 
     Args:
         environment_id (UUID):

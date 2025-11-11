@@ -81,6 +81,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[ChatMessageRouter]]:
     """Get Chat Messages
 
+     Retrieve all messages from a specific chat session
+
     Args:
         chat_id (str):
         limit (int | Unset):  Default: 100.
@@ -116,6 +118,8 @@ def sync(
 ) -> Any | HTTPValidationError | list[ChatMessageRouter] | None:
     """Get Chat Messages
 
+     Retrieve all messages from a specific chat session
+
     Args:
         chat_id (str):
         limit (int | Unset):  Default: 100.
@@ -145,6 +149,8 @@ async def asyncio_detailed(
     offset: int | Unset = 0,
 ) -> Response[Any | HTTPValidationError | list[ChatMessageRouter]]:
     """Get Chat Messages
+
+     Retrieve all messages from a specific chat session
 
     Args:
         chat_id (str):
@@ -178,6 +184,8 @@ async def asyncio(
     offset: int | Unset = 0,
 ) -> Any | HTTPValidationError | list[ChatMessageRouter] | None:
     """Get Chat Messages
+
+     Retrieve all messages from a specific chat session
 
     Args:
         chat_id (str):

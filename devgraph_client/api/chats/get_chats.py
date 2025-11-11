@@ -79,6 +79,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[ChatSession]]:
     """Get Chats
 
+     List all chat sessions for the authenticated user
+
     Args:
         offset (int | Unset):  Default: 0.
         limit (int | Unset):  Default: 100.
@@ -111,6 +113,8 @@ def sync(
 ) -> Any | HTTPValidationError | list[ChatSession] | None:
     """Get Chats
 
+     List all chat sessions for the authenticated user
+
     Args:
         offset (int | Unset):  Default: 0.
         limit (int | Unset):  Default: 100.
@@ -137,6 +141,8 @@ async def asyncio_detailed(
     limit: int | Unset = 100,
 ) -> Response[Any | HTTPValidationError | list[ChatSession]]:
     """Get Chats
+
+     List all chat sessions for the authenticated user
 
     Args:
         offset (int | Unset):  Default: 0.
@@ -167,6 +173,8 @@ async def asyncio(
     limit: int | Unset = 100,
 ) -> Any | HTTPValidationError | list[ChatSession] | None:
     """Get Chats
+
+     List all chat sessions for the authenticated user
 
     Args:
         offset (int | Unset):  Default: 0.

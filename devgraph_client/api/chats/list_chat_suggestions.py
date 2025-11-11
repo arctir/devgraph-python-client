@@ -75,7 +75,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[ChatSuggestionResponse]]:
     """List Chat Suggestions
 
-     List chat suggestions. Returns system-wide suggestions + environment/user-specific ones.
+     List chat suggestions including system-wide and user-specific ones
 
     Args:
         active_only (bool | Unset):  Default: True.
@@ -106,7 +106,7 @@ def sync(
 ) -> Any | HTTPValidationError | list[ChatSuggestionResponse] | None:
     """List Chat Suggestions
 
-     List chat suggestions. Returns system-wide suggestions + environment/user-specific ones.
+     List chat suggestions including system-wide and user-specific ones
 
     Args:
         active_only (bool | Unset):  Default: True.
@@ -132,7 +132,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | list[ChatSuggestionResponse]]:
     """List Chat Suggestions
 
-     List chat suggestions. Returns system-wide suggestions + environment/user-specific ones.
+     List chat suggestions including system-wide and user-specific ones
 
     Args:
         active_only (bool | Unset):  Default: True.
@@ -161,7 +161,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | list[ChatSuggestionResponse] | None:
     """List Chat Suggestions
 
-     List chat suggestions. Returns system-wide suggestions + environment/user-specific ones.
+     List chat suggestions including system-wide and user-specific ones
 
     Args:
         active_only (bool | Unset):  Default: True.

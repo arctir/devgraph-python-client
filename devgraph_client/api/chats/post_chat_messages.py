@@ -81,6 +81,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[ChatMessageRouter]]:
     """Post Chat Messages
 
+     Add one or more messages to a chat session
+
     Args:
         chat_id (str):
         body (list[ChatMessageCreate]):
@@ -113,6 +115,8 @@ def sync(
 ) -> Any | HTTPValidationError | list[ChatMessageRouter] | None:
     """Post Chat Messages
 
+     Add one or more messages to a chat session
+
     Args:
         chat_id (str):
         body (list[ChatMessageCreate]):
@@ -139,6 +143,8 @@ async def asyncio_detailed(
     body: list[ChatMessageCreate],
 ) -> Response[Any | HTTPValidationError | list[ChatMessageRouter]]:
     """Post Chat Messages
+
+     Add one or more messages to a chat session
 
     Args:
         chat_id (str):
@@ -169,6 +175,8 @@ async def asyncio(
     body: list[ChatMessageCreate],
 ) -> Any | HTTPValidationError | list[ChatMessageRouter] | None:
     """Post Chat Messages
+
+     Add one or more messages to a chat session
 
     Args:
         chat_id (str):

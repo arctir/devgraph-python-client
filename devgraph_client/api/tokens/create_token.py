@@ -71,6 +71,8 @@ def sync_detailed(
 ) -> Response[Any | ApiTokenResponse | HTTPValidationError]:
     """Create Token
 
+     Create a new API token for the authenticated user
+
     Args:
         body (ApiTokenCreate):
 
@@ -100,6 +102,8 @@ def sync(
 ) -> Any | ApiTokenResponse | HTTPValidationError | None:
     """Create Token
 
+     Create a new API token for the authenticated user
+
     Args:
         body (ApiTokenCreate):
 
@@ -123,6 +127,8 @@ async def asyncio_detailed(
     body: ApiTokenCreate,
 ) -> Response[Any | ApiTokenResponse | HTTPValidationError]:
     """Create Token
+
+     Create a new API token for the authenticated user
 
     Args:
         body (ApiTokenCreate):
@@ -150,6 +156,8 @@ async def asyncio(
     body: ApiTokenCreate,
 ) -> Any | ApiTokenResponse | HTTPValidationError | None:
     """Create Token
+
+     Create a new API token for the authenticated user
 
     Args:
         body (ApiTokenCreate):

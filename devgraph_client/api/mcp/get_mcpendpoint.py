@@ -63,7 +63,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | MCPEndpointResponse]:
     """Get Mcpendpoint
 
-     Get a specific MCP Endpoint configuration by ID.
+     Get a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -94,7 +94,7 @@ def sync(
 ) -> Any | HTTPValidationError | MCPEndpointResponse | None:
     """Get Mcpendpoint
 
-     Get a specific MCP Endpoint configuration by ID.
+     Get a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -120,7 +120,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | MCPEndpointResponse]:
     """Get Mcpendpoint
 
-     Get a specific MCP Endpoint configuration by ID.
+     Get a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -149,7 +149,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | MCPEndpointResponse | None:
     """Get Mcpendpoint
 
-     Get a specific MCP Endpoint configuration by ID.
+     Get a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):

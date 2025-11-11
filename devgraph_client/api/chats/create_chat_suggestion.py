@@ -71,7 +71,7 @@ def sync_detailed(
 ) -> Response[Any | ChatSuggestionResponse | HTTPValidationError]:
     """Create Chat Suggestion
 
-     Create a new chat suggestion for the environment.
+     Create a new chat suggestion for the environment
 
     Args:
         body (ChatSuggestionCreate):
@@ -102,7 +102,7 @@ def sync(
 ) -> Any | ChatSuggestionResponse | HTTPValidationError | None:
     """Create Chat Suggestion
 
-     Create a new chat suggestion for the environment.
+     Create a new chat suggestion for the environment
 
     Args:
         body (ChatSuggestionCreate):
@@ -128,7 +128,7 @@ async def asyncio_detailed(
 ) -> Response[Any | ChatSuggestionResponse | HTTPValidationError]:
     """Create Chat Suggestion
 
-     Create a new chat suggestion for the environment.
+     Create a new chat suggestion for the environment
 
     Args:
         body (ChatSuggestionCreate):
@@ -157,7 +157,7 @@ async def asyncio(
 ) -> Any | ChatSuggestionResponse | HTTPValidationError | None:
     """Create Chat Suggestion
 
-     Create a new chat suggestion for the environment.
+     Create a new chat suggestion for the environment
 
     Args:
         body (ChatSuggestionCreate):

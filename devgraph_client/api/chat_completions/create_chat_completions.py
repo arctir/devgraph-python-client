@@ -65,7 +65,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Post Chat Completions
 
-     Handle chat completions requests.
+     Create a chat completion with optional streaming response
 
     Args:
         body (ChatCompletionRequest):
@@ -96,7 +96,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Post Chat Completions
 
-     Handle chat completions requests.
+     Create a chat completion with optional streaming response
 
     Args:
         body (ChatCompletionRequest):
@@ -122,7 +122,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Post Chat Completions
 
-     Handle chat completions requests.
+     Create a chat completion with optional streaming response
 
     Args:
         body (ChatCompletionRequest):
@@ -151,7 +151,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Post Chat Completions
 
-     Handle chat completions requests.
+     Create a chat completion with optional streaming response
 
     Args:
         body (ChatCompletionRequest):

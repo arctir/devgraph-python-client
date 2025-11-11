@@ -61,6 +61,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Oauth Service
 
+     Delete an OAuth service configuration
+
     Args:
         service_id (UUID):
 
@@ -90,6 +92,8 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Oauth Service
 
+     Delete an OAuth service configuration
+
     Args:
         service_id (UUID):
 
@@ -113,6 +117,8 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
 ) -> Response[Any | HTTPValidationError]:
     """Delete Oauth Service
+
+     Delete an OAuth service configuration
 
     Args:
         service_id (UUID):
@@ -140,6 +146,8 @@ async def asyncio(
     client: AuthenticatedClient,
 ) -> Any | HTTPValidationError | None:
     """Delete Oauth Service
+
+     Delete an OAuth service configuration
 
     Args:
         service_id (UUID):

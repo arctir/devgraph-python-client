@@ -113,7 +113,7 @@ def sync_detailed(
 ]:
     """Update Modelprovider
 
-     Update a specific Model Provider configuration by ID.
+     Update a specific model provider configuration by ID
 
     Args:
         provider_id (UUID):
@@ -154,7 +154,7 @@ def sync(
 ):
     """Update Modelprovider
 
-     Update a specific Model Provider configuration by ID.
+     Update a specific model provider configuration by ID
 
     Args:
         provider_id (UUID):
@@ -185,7 +185,7 @@ async def asyncio_detailed(
 ]:
     """Update Modelprovider
 
-     Update a specific Model Provider configuration by ID.
+     Update a specific model provider configuration by ID
 
     Args:
         provider_id (UUID):
@@ -224,7 +224,7 @@ async def asyncio(
 ):
     """Update Modelprovider
 
-     Update a specific Model Provider configuration by ID.
+     Update a specific model provider configuration by ID
 
     Args:
         provider_id (UUID):

@@ -71,6 +71,8 @@ def sync_detailed(
 ) -> Response[Any | ChatSession | HTTPValidationError]:
     """Create Chat
 
+     Create a new chat session
+
     Args:
         body (ChatSessionCreate):
 
@@ -100,6 +102,8 @@ def sync(
 ) -> Any | ChatSession | HTTPValidationError | None:
     """Create Chat
 
+     Create a new chat session
+
     Args:
         body (ChatSessionCreate):
 
@@ -123,6 +127,8 @@ async def asyncio_detailed(
     body: ChatSessionCreate,
 ) -> Response[Any | ChatSession | HTTPValidationError]:
     """Create Chat
+
+     Create a new chat session
 
     Args:
         body (ChatSessionCreate):
@@ -150,6 +156,8 @@ async def asyncio(
     body: ChatSessionCreate,
 ) -> Any | ChatSession | HTTPValidationError | None:
     """Create Chat
+
+     Create a new chat session
 
     Args:
         body (ChatSessionCreate):

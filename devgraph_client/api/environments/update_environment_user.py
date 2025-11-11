@@ -76,7 +76,7 @@ def sync_detailed(
 ) -> Response[Any | EnvironmentUserResponse | HTTPValidationError]:
     """Update Environment User
 
-     Update an environment user's role.
+     Update an environment user's role
 
     Args:
         environment_id (UUID):
@@ -113,7 +113,7 @@ def sync(
 ) -> Any | EnvironmentUserResponse | HTTPValidationError | None:
     """Update Environment User
 
-     Update an environment user's role.
+     Update an environment user's role
 
     Args:
         environment_id (UUID):
@@ -145,7 +145,7 @@ async def asyncio_detailed(
 ) -> Response[Any | EnvironmentUserResponse | HTTPValidationError]:
     """Update Environment User
 
-     Update an environment user's role.
+     Update an environment user's role
 
     Args:
         environment_id (UUID):
@@ -180,7 +180,7 @@ async def asyncio(
 ) -> Any | EnvironmentUserResponse | HTTPValidationError | None:
     """Update Environment User
 
-     Update an environment user's role.
+     Update an environment user's role
 
     Args:
         environment_id (UUID):

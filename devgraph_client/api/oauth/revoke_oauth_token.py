@@ -60,6 +60,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Revoke Token
 
+     Revoke an OAuth token for a service
+
     Args:
         service_name (str):
 
@@ -89,6 +91,8 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Revoke Token
 
+     Revoke an OAuth token for a service
+
     Args:
         service_name (str):
 
@@ -112,6 +116,8 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
 ) -> Response[Any | HTTPValidationError]:
     """Revoke Token
+
+     Revoke an OAuth token for a service
 
     Args:
         service_name (str):
@@ -139,6 +145,8 @@ async def asyncio(
     client: AuthenticatedClient,
 ) -> Any | HTTPValidationError | None:
     """Revoke Token
+
+     Revoke an OAuth token for a service
 
     Args:
         service_name (str):

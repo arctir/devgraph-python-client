@@ -82,7 +82,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[MCPToolEntityAssociationResponse]]:
     """Get Mcp Endpoint Entity Types
 
-     Get all entity types associated with an MCP endpoint's tools.
+     Get all entity types associated with an MCP endpoint's tools
 
     Args:
         mcpendpoint_name (str):
@@ -116,7 +116,7 @@ def sync(
 ) -> Any | HTTPValidationError | list[MCPToolEntityAssociationResponse] | None:
     """Get Mcp Endpoint Entity Types
 
-     Get all entity types associated with an MCP endpoint's tools.
+     Get all entity types associated with an MCP endpoint's tools
 
     Args:
         mcpendpoint_name (str):
@@ -145,7 +145,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | list[MCPToolEntityAssociationResponse]]:
     """Get Mcp Endpoint Entity Types
 
-     Get all entity types associated with an MCP endpoint's tools.
+     Get all entity types associated with an MCP endpoint's tools
 
     Args:
         mcpendpoint_name (str):
@@ -177,7 +177,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | list[MCPToolEntityAssociationResponse] | None:
     """Get Mcp Endpoint Entity Types
 
-     Get all entity types associated with an MCP endpoint's tools.
+     Get all entity types associated with an MCP endpoint's tools
 
     Args:
         mcpendpoint_name (str):

@@ -45,6 +45,8 @@ def sync_detailed(
 ) -> Response[Any]:
     """List User Tokens
 
+     List all OAuth tokens for the authenticated user
+
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
         httpx.TimeoutException: If the request takes longer than Client.timeout.
@@ -67,6 +69,8 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
 ) -> Response[Any]:
     """List User Tokens
+
+     List all OAuth tokens for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

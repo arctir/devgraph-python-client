@@ -74,7 +74,7 @@ def sync_detailed(
 ) -> Response[Any | ApiTokenResponse | HTTPValidationError]:
     """Update Token
 
-     Update a specific API token by ID.
+     Update an existing API token
 
     Args:
         token_id (UUID):
@@ -108,7 +108,7 @@ def sync(
 ) -> Any | ApiTokenResponse | HTTPValidationError | None:
     """Update Token
 
-     Update a specific API token by ID.
+     Update an existing API token
 
     Args:
         token_id (UUID):
@@ -137,7 +137,7 @@ async def asyncio_detailed(
 ) -> Response[Any | ApiTokenResponse | HTTPValidationError]:
     """Update Token
 
-     Update a specific API token by ID.
+     Update an existing API token
 
     Args:
         token_id (UUID):
@@ -169,7 +169,7 @@ async def asyncio(
 ) -> Any | ApiTokenResponse | HTTPValidationError | None:
     """Update Token
 
-     Update a specific API token by ID.
+     Update an existing API token
 
     Args:
         token_id (UUID):

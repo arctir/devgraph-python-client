@@ -62,10 +62,7 @@ def sync_detailed(
 ) -> Response[Any | EntitlementCheckResponse | HTTPValidationError]:
     """Check Entitlement
 
-     Check a specific entitlement for the authenticated user.
-
-    For numeric limits (e.g., max_environments), returns current usage and remaining quota.
-    For boolean features (e.g., enable_sso), returns whether the feature is enabled.
+     Check a specific entitlement for the authenticated user
 
     Args:
         entitlement_type (str):
@@ -96,10 +93,7 @@ def sync(
 ) -> Any | EntitlementCheckResponse | HTTPValidationError | None:
     """Check Entitlement
 
-     Check a specific entitlement for the authenticated user.
-
-    For numeric limits (e.g., max_environments), returns current usage and remaining quota.
-    For boolean features (e.g., enable_sso), returns whether the feature is enabled.
+     Check a specific entitlement for the authenticated user
 
     Args:
         entitlement_type (str):
@@ -125,10 +119,7 @@ async def asyncio_detailed(
 ) -> Response[Any | EntitlementCheckResponse | HTTPValidationError]:
     """Check Entitlement
 
-     Check a specific entitlement for the authenticated user.
-
-    For numeric limits (e.g., max_environments), returns current usage and remaining quota.
-    For boolean features (e.g., enable_sso), returns whether the feature is enabled.
+     Check a specific entitlement for the authenticated user
 
     Args:
         entitlement_type (str):
@@ -157,10 +148,7 @@ async def asyncio(
 ) -> Any | EntitlementCheckResponse | HTTPValidationError | None:
     """Check Entitlement
 
-     Check a specific entitlement for the authenticated user.
-
-    For numeric limits (e.g., max_environments), returns current usage and remaining quota.
-    For boolean features (e.g., enable_sso), returns whether the feature is enabled.
+     Check a specific entitlement for the authenticated user
 
     Args:
         entitlement_type (str):

@@ -53,7 +53,7 @@ def sync_detailed(
 ) -> Response[Any | UserEntitlementsResponse]:
     """Get Entitlements
 
-     Get all entitlements and current usage for the authenticated user.
+     Get all entitlements and current usage for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -78,7 +78,7 @@ def sync(
 ) -> Any | UserEntitlementsResponse | None:
     """Get Entitlements
 
-     Get all entitlements and current usage for the authenticated user.
+     Get all entitlements and current usage for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -99,7 +99,7 @@ async def asyncio_detailed(
 ) -> Response[Any | UserEntitlementsResponse]:
     """Get Entitlements
 
-     Get all entitlements and current usage for the authenticated user.
+     Get all entitlements and current usage for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -122,7 +122,7 @@ async def asyncio(
 ) -> Any | UserEntitlementsResponse | None:
     """Get Entitlements
 
-     Get all entitlements and current usage for the authenticated user.
+     Get all entitlements and current usage for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

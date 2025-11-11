@@ -60,6 +60,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Chat
 
+     Delete a chat session by ID
+
     Args:
         chat_id (str):
 
@@ -89,6 +91,8 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Chat
 
+     Delete a chat session by ID
+
     Args:
         chat_id (str):
 
@@ -112,6 +116,8 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
 ) -> Response[Any | HTTPValidationError]:
     """Delete Chat
+
+     Delete a chat session by ID
 
     Args:
         chat_id (str):
@@ -139,6 +145,8 @@ async def asyncio(
     client: AuthenticatedClient,
 ) -> Any | HTTPValidationError | None:
     """Delete Chat
+
+     Delete a chat session by ID
 
     Args:
         chat_id (str):

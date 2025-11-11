@@ -71,6 +71,8 @@ def sync_detailed(
 ) -> Response[Any | EnvironmentResponse | HTTPValidationError]:
     """Create Environment
 
+     Create a new environment with associated Clerk organization
+
     Args:
         body (EnvironmentCreate):
 
@@ -100,6 +102,8 @@ def sync(
 ) -> Any | EnvironmentResponse | HTTPValidationError | None:
     """Create Environment
 
+     Create a new environment with associated Clerk organization
+
     Args:
         body (EnvironmentCreate):
 
@@ -123,6 +127,8 @@ async def asyncio_detailed(
     body: EnvironmentCreate,
 ) -> Response[Any | EnvironmentResponse | HTTPValidationError]:
     """Create Environment
+
+     Create a new environment with associated Clerk organization
 
     Args:
         body (EnvironmentCreate):
@@ -150,6 +156,8 @@ async def asyncio(
     body: EnvironmentCreate,
 ) -> Any | EnvironmentResponse | HTTPValidationError | None:
     """Create Environment
+
+     Create a new environment with associated Clerk organization
 
     Args:
         body (EnvironmentCreate):

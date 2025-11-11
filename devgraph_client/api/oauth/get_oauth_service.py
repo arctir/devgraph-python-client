@@ -63,6 +63,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | OAuthServiceResponse]:
     """Get Oauth Service
 
+     Get a specific OAuth service configuration by ID
+
     Args:
         service_id (UUID):
 
@@ -92,6 +94,8 @@ def sync(
 ) -> Any | HTTPValidationError | OAuthServiceResponse | None:
     """Get Oauth Service
 
+     Get a specific OAuth service configuration by ID
+
     Args:
         service_id (UUID):
 
@@ -115,6 +119,8 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
 ) -> Response[Any | HTTPValidationError | OAuthServiceResponse]:
     """Get Oauth Service
+
+     Get a specific OAuth service configuration by ID
 
     Args:
         service_id (UUID):
@@ -142,6 +148,8 @@ async def asyncio(
     client: AuthenticatedClient,
 ) -> Any | HTTPValidationError | OAuthServiceResponse | None:
     """Get Oauth Service
+
+     Get a specific OAuth service configuration by ID
 
     Args:
         service_id (UUID):

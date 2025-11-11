@@ -102,7 +102,7 @@ def sync_detailed(
 ]:
     """Get Modelprovider
 
-     Get a specific Model Provider configuration by ID.
+     Get a specific model provider configuration by ID
 
     Args:
         provider_id (UUID):
@@ -140,7 +140,7 @@ def sync(
 ):
     """Get Modelprovider
 
-     Get a specific Model Provider configuration by ID.
+     Get a specific model provider configuration by ID
 
     Args:
         provider_id (UUID):
@@ -168,7 +168,7 @@ async def asyncio_detailed(
 ]:
     """Get Modelprovider
 
-     Get a specific Model Provider configuration by ID.
+     Get a specific model provider configuration by ID
 
     Args:
         provider_id (UUID):
@@ -204,7 +204,7 @@ async def asyncio(
 ):
     """Get Modelprovider
 
-     Get a specific Model Provider configuration by ID.
+     Get a specific model provider configuration by ID
 
     Args:
         provider_id (UUID):

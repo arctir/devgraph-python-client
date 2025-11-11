@@ -71,6 +71,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | OAuthServiceResponse]:
     """Create Oauth Service
 
+     Create a new OAuth service configuration
+
     Args:
         body (OAuthServiceCreate):
 
@@ -100,6 +102,8 @@ def sync(
 ) -> Any | HTTPValidationError | OAuthServiceResponse | None:
     """Create Oauth Service
 
+     Create a new OAuth service configuration
+
     Args:
         body (OAuthServiceCreate):
 
@@ -123,6 +127,8 @@ async def asyncio_detailed(
     body: OAuthServiceCreate,
 ) -> Response[Any | HTTPValidationError | OAuthServiceResponse]:
     """Create Oauth Service
+
+     Create a new OAuth service configuration
 
     Args:
         body (OAuthServiceCreate):
@@ -150,6 +156,8 @@ async def asyncio(
     body: OAuthServiceCreate,
 ) -> Any | HTTPValidationError | OAuthServiceResponse | None:
     """Create Oauth Service
+
+     Create a new OAuth service configuration
 
     Args:
         body (OAuthServiceCreate):

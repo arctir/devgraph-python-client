@@ -85,7 +85,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[MCPToolEntityAssociationResponse]]:
     """Get Entity Tools
 
-     Get all MCP tools associated with an entity definition.
+     Get all MCP tools associated with an entity definition
 
     Args:
         entity_definition_id (UUID):
@@ -119,7 +119,7 @@ def sync(
 ) -> Any | HTTPValidationError | list[MCPToolEntityAssociationResponse] | None:
     """Get Entity Tools
 
-     Get all MCP tools associated with an entity definition.
+     Get all MCP tools associated with an entity definition
 
     Args:
         entity_definition_id (UUID):
@@ -148,7 +148,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | list[MCPToolEntityAssociationResponse]]:
     """Get Entity Tools
 
-     Get all MCP tools associated with an entity definition.
+     Get all MCP tools associated with an entity definition
 
     Args:
         entity_definition_id (UUID):
@@ -180,7 +180,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | list[MCPToolEntityAssociationResponse] | None:
     """Get Entity Tools
 
-     Get all MCP tools associated with an entity definition.
+     Get all MCP tools associated with an entity definition
 
     Args:
         entity_definition_id (UUID):

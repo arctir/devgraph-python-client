@@ -71,6 +71,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | OAuthTokenResponse]:
     """Exchange Code For Token
 
+     Exchange an authorization code for an access token
+
     Args:
         body (OAuthTokenExchange):
 
@@ -100,6 +102,8 @@ def sync(
 ) -> Any | HTTPValidationError | OAuthTokenResponse | None:
     """Exchange Code For Token
 
+     Exchange an authorization code for an access token
+
     Args:
         body (OAuthTokenExchange):
 
@@ -123,6 +127,8 @@ async def asyncio_detailed(
     body: OAuthTokenExchange,
 ) -> Response[Any | HTTPValidationError | OAuthTokenResponse]:
     """Exchange Code For Token
+
+     Exchange an authorization code for an access token
 
     Args:
         body (OAuthTokenExchange):
@@ -150,6 +156,8 @@ async def asyncio(
     body: OAuthTokenExchange,
 ) -> Any | HTTPValidationError | OAuthTokenResponse | None:
     """Exchange Code For Token
+
+     Exchange an authorization code for an access token
 
     Args:
         body (OAuthTokenExchange):

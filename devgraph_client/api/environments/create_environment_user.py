@@ -74,7 +74,7 @@ def sync_detailed(
 ) -> Response[Any | EnvironmentUserResponse | HTTPValidationError]:
     """Create Environment User
 
-     Create a new environment user by adding them to the Clerk organization.
+     Create a new environment user by adding them to the Clerk organization
 
     Args:
         environment_id (UUID):
@@ -108,7 +108,7 @@ def sync(
 ) -> Any | EnvironmentUserResponse | HTTPValidationError | None:
     """Create Environment User
 
-     Create a new environment user by adding them to the Clerk organization.
+     Create a new environment user by adding them to the Clerk organization
 
     Args:
         environment_id (UUID):
@@ -137,7 +137,7 @@ async def asyncio_detailed(
 ) -> Response[Any | EnvironmentUserResponse | HTTPValidationError]:
     """Create Environment User
 
-     Create a new environment user by adding them to the Clerk organization.
+     Create a new environment user by adding them to the Clerk organization
 
     Args:
         environment_id (UUID):
@@ -169,7 +169,7 @@ async def asyncio(
 ) -> Any | EnvironmentUserResponse | HTTPValidationError | None:
     """Create Environment User
 
-     Create a new environment user by adding them to the Clerk organization.
+     Create a new environment user by adding them to the Clerk organization
 
     Args:
         environment_id (UUID):

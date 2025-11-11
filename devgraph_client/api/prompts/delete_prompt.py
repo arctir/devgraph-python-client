@@ -61,7 +61,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Prompt
 
-     Soft delete a prompt template by ID
+     Delete a prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -92,7 +92,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Prompt
 
-     Soft delete a prompt template by ID
+     Delete a prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -118,7 +118,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Prompt
 
-     Soft delete a prompt template by ID
+     Delete a prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -147,7 +147,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Prompt
 
-     Soft delete a prompt template by ID
+     Delete a prompt template by ID
 
     Args:
         prompt_id (UUID):

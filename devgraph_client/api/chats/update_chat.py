@@ -73,6 +73,8 @@ def sync_detailed(
 ) -> Response[Any | ChatSession | HTTPValidationError]:
     """Update Chat
 
+     Update an existing chat session
+
     Args:
         chat_id (str):
         body (ChatSessionUpdate):
@@ -105,6 +107,8 @@ def sync(
 ) -> Any | ChatSession | HTTPValidationError | None:
     """Update Chat
 
+     Update an existing chat session
+
     Args:
         chat_id (str):
         body (ChatSessionUpdate):
@@ -131,6 +135,8 @@ async def asyncio_detailed(
     body: ChatSessionUpdate,
 ) -> Response[Any | ChatSession | HTTPValidationError]:
     """Update Chat
+
+     Update an existing chat session
 
     Args:
         chat_id (str):
@@ -161,6 +167,8 @@ async def asyncio(
     body: ChatSessionUpdate,
 ) -> Any | ChatSession | HTTPValidationError | None:
     """Update Chat
+
+     Update an existing chat session
 
     Args:
         chat_id (str):

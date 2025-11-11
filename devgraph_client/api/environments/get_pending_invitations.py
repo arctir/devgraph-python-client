@@ -68,7 +68,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[PendingInvitationResponse]]:
     """Get Pending Invitations
 
-     Get all pending invitations for an environment (users who have been invited but haven't joined yet).
+     Get all pending invitations for an environment
 
     Args:
         environment_id (UUID):
@@ -99,7 +99,7 @@ def sync(
 ) -> Any | HTTPValidationError | list[PendingInvitationResponse] | None:
     """Get Pending Invitations
 
-     Get all pending invitations for an environment (users who have been invited but haven't joined yet).
+     Get all pending invitations for an environment
 
     Args:
         environment_id (UUID):
@@ -125,7 +125,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | list[PendingInvitationResponse]]:
     """Get Pending Invitations
 
-     Get all pending invitations for an environment (users who have been invited but haven't joined yet).
+     Get all pending invitations for an environment
 
     Args:
         environment_id (UUID):
@@ -154,7 +154,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | list[PendingInvitationResponse] | None:
     """Get Pending Invitations
 
-     Get all pending invitations for an environment (users who have been invited but haven't joined yet).
+     Get all pending invitations for an environment
 
     Args:
         environment_id (UUID):

@@ -80,6 +80,8 @@ def sync_detailed(
 ) -> Response[Any | EntityRelationResponse | HTTPValidationError]:
     """Create Entity Relation
 
+     Create a relation between two entities in the knowledge graph
+
     Args:
         namespace (str):
         body (EntityRelation):
@@ -112,6 +114,8 @@ def sync(
 ) -> Any | EntityRelationResponse | HTTPValidationError | None:
     """Create Entity Relation
 
+     Create a relation between two entities in the knowledge graph
+
     Args:
         namespace (str):
         body (EntityRelation):
@@ -138,6 +142,8 @@ async def asyncio_detailed(
     namespace: str,
 ) -> Response[Any | EntityRelationResponse | HTTPValidationError]:
     """Create Entity Relation
+
+     Create a relation between two entities in the knowledge graph
 
     Args:
         namespace (str):
@@ -168,6 +174,8 @@ async def asyncio(
     namespace: str,
 ) -> Any | EntityRelationResponse | HTTPValidationError | None:
     """Create Entity Relation
+
+     Create a relation between two entities in the knowledge graph
 
     Args:
         namespace (str):

@@ -60,7 +60,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Model
 
-     Soft delete an AI model configuration by name
+     Delete an AI model configuration by name
 
     Args:
         model_name (str):
@@ -91,7 +91,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Model
 
-     Soft delete an AI model configuration by name
+     Delete an AI model configuration by name
 
     Args:
         model_name (str):
@@ -117,7 +117,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Model
 
-     Soft delete an AI model configuration by name
+     Delete an AI model configuration by name
 
     Args:
         model_name (str):
@@ -146,7 +146,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Model
 
-     Soft delete an AI model configuration by name
+     Delete an AI model configuration by name
 
     Args:
         model_name (str):

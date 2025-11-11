@@ -68,7 +68,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[EnvironmentUserResponse]]:
     """List Environment Users
 
-     List all users in an environment (organization members).
+     List all users in an environment
 
     Args:
         environment_id (UUID):
@@ -99,7 +99,7 @@ def sync(
 ) -> Any | HTTPValidationError | list[EnvironmentUserResponse] | None:
     """List Environment Users
 
-     List all users in an environment (organization members).
+     List all users in an environment
 
     Args:
         environment_id (UUID):
@@ -125,7 +125,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | list[EnvironmentUserResponse]]:
     """List Environment Users
 
-     List all users in an environment (organization members).
+     List all users in an environment
 
     Args:
         environment_id (UUID):
@@ -154,7 +154,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | list[EnvironmentUserResponse] | None:
     """List Environment Users
 
-     List all users in an environment (organization members).
+     List all users in an environment
 
     Args:
         environment_id (UUID):

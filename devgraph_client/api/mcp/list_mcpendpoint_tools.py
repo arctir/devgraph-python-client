@@ -68,8 +68,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[ListMcpendpointToolsResponse200Item]]:
     """List Mcpendpoint Tools
 
-     List all available tools from a specific MCP Endpoint.
-    This interrogates the MCP server to discover its available tools.
+     List all available tools from a specific MCP endpoint
 
     Args:
         mcpendpoint_id (UUID):
@@ -100,8 +99,7 @@ def sync(
 ) -> Any | HTTPValidationError | list[ListMcpendpointToolsResponse200Item] | None:
     """List Mcpendpoint Tools
 
-     List all available tools from a specific MCP Endpoint.
-    This interrogates the MCP server to discover its available tools.
+     List all available tools from a specific MCP endpoint
 
     Args:
         mcpendpoint_id (UUID):
@@ -127,8 +125,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | list[ListMcpendpointToolsResponse200Item]]:
     """List Mcpendpoint Tools
 
-     List all available tools from a specific MCP Endpoint.
-    This interrogates the MCP server to discover its available tools.
+     List all available tools from a specific MCP endpoint
 
     Args:
         mcpendpoint_id (UUID):
@@ -157,8 +154,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | list[ListMcpendpointToolsResponse200Item] | None:
     """List Mcpendpoint Tools
 
-     List all available tools from a specific MCP Endpoint.
-    This interrogates the MCP server to discover its available tools.
+     List all available tools from a specific MCP endpoint
 
     Args:
         mcpendpoint_id (UUID):

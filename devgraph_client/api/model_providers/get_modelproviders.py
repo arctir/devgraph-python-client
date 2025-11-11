@@ -86,7 +86,7 @@ def sync_detailed(
 ) -> Response[Any | list[AnthropicModelProviderResponse | OpenAIModelProviderResponse | XAIModelProviderResponse]]:
     """Get Modelproviders
 
-     List all Model Provider configurations for the authenticated user and environment.
+     List all model provider configurations for the authenticated user and environment
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -111,7 +111,7 @@ def sync(
 ) -> Any | list[AnthropicModelProviderResponse | OpenAIModelProviderResponse | XAIModelProviderResponse] | None:
     """Get Modelproviders
 
-     List all Model Provider configurations for the authenticated user and environment.
+     List all model provider configurations for the authenticated user and environment
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -132,7 +132,7 @@ async def asyncio_detailed(
 ) -> Response[Any | list[AnthropicModelProviderResponse | OpenAIModelProviderResponse | XAIModelProviderResponse]]:
     """Get Modelproviders
 
-     List all Model Provider configurations for the authenticated user and environment.
+     List all model provider configurations for the authenticated user and environment
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -155,7 +155,7 @@ async def asyncio(
 ) -> Any | list[AnthropicModelProviderResponse | OpenAIModelProviderResponse | XAIModelProviderResponse] | None:
     """Get Modelproviders
 
-     List all Model Provider configurations for the authenticated user and environment.
+     List all model provider configurations for the authenticated user and environment
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

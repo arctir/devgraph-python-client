@@ -74,6 +74,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | OAuthServiceResponse]:
     """Update Oauth Service
 
+     Update an existing OAuth service configuration
+
     Args:
         service_id (UUID):
         body (OAuthServiceUpdate):
@@ -106,6 +108,8 @@ def sync(
 ) -> Any | HTTPValidationError | OAuthServiceResponse | None:
     """Update Oauth Service
 
+     Update an existing OAuth service configuration
+
     Args:
         service_id (UUID):
         body (OAuthServiceUpdate):
@@ -132,6 +136,8 @@ async def asyncio_detailed(
     body: OAuthServiceUpdate,
 ) -> Response[Any | HTTPValidationError | OAuthServiceResponse]:
     """Update Oauth Service
+
+     Update an existing OAuth service configuration
 
     Args:
         service_id (UUID):
@@ -162,6 +168,8 @@ async def asyncio(
     body: OAuthServiceUpdate,
 ) -> Any | HTTPValidationError | OAuthServiceResponse | None:
     """Update Oauth Service
+
+     Update an existing OAuth service configuration
 
     Args:
         service_id (UUID):

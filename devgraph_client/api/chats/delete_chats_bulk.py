@@ -69,7 +69,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Chats Bulk
 
-     Bulk delete multiple chat sessions.
+     Delete multiple chat sessions in bulk
 
     Args:
         body (BulkDeleteRequest): Request model for bulk chat deletion.
@@ -100,7 +100,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Chats Bulk
 
-     Bulk delete multiple chat sessions.
+     Delete multiple chat sessions in bulk
 
     Args:
         body (BulkDeleteRequest): Request model for bulk chat deletion.
@@ -126,7 +126,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Chats Bulk
 
-     Bulk delete multiple chat sessions.
+     Delete multiple chat sessions in bulk
 
     Args:
         body (BulkDeleteRequest): Request model for bulk chat deletion.
@@ -155,7 +155,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Chats Bulk
 
-     Bulk delete multiple chat sessions.
+     Delete multiple chat sessions in bulk
 
     Args:
         body (BulkDeleteRequest): Request model for bulk chat deletion.

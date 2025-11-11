@@ -74,7 +74,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | MCPEndpointResponse]:
     """Update Mcpendpoint
 
-     Update a specific MCP Endpoint configuration by ID.
+     Update a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -108,7 +108,7 @@ def sync(
 ) -> Any | HTTPValidationError | MCPEndpointResponse | None:
     """Update Mcpendpoint
 
-     Update a specific MCP Endpoint configuration by ID.
+     Update a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -137,7 +137,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | MCPEndpointResponse]:
     """Update Mcpendpoint
 
-     Update a specific MCP Endpoint configuration by ID.
+     Update a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -169,7 +169,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | MCPEndpointResponse | None:
     """Update Mcpendpoint
 
-     Update a specific MCP Endpoint configuration by ID.
+     Update a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):

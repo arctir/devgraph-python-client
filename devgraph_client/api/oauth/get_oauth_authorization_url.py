@@ -71,6 +71,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | OAuthAuthorizationResponse]:
     """Get Authorization Url
 
+     Generate an OAuth authorization URL for a service
+
     Args:
         body (OAuthAuthorizationRequest):
 
@@ -100,6 +102,8 @@ def sync(
 ) -> Any | HTTPValidationError | OAuthAuthorizationResponse | None:
     """Get Authorization Url
 
+     Generate an OAuth authorization URL for a service
+
     Args:
         body (OAuthAuthorizationRequest):
 
@@ -123,6 +127,8 @@ async def asyncio_detailed(
     body: OAuthAuthorizationRequest,
 ) -> Response[Any | HTTPValidationError | OAuthAuthorizationResponse]:
     """Get Authorization Url
+
+     Generate an OAuth authorization URL for a service
 
     Args:
         body (OAuthAuthorizationRequest):
@@ -150,6 +156,8 @@ async def asyncio(
     body: OAuthAuthorizationRequest,
 ) -> Any | HTTPValidationError | OAuthAuthorizationResponse | None:
     """Get Authorization Url
+
+     Generate an OAuth authorization URL for a service
 
     Args:
         body (OAuthAuthorizationRequest):

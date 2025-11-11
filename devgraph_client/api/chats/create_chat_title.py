@@ -71,7 +71,7 @@ def sync_detailed(
 ) -> Response[Any | ChatTitleResponse | HTTPValidationError]:
     """Post Chat Title
 
-     Generate a title for a chat based on the first message.
+     Generate a title for a chat based on the first message
 
     Args:
         body (ChatTitleRequest):
@@ -102,7 +102,7 @@ def sync(
 ) -> Any | ChatTitleResponse | HTTPValidationError | None:
     """Post Chat Title
 
-     Generate a title for a chat based on the first message.
+     Generate a title for a chat based on the first message
 
     Args:
         body (ChatTitleRequest):
@@ -128,7 +128,7 @@ async def asyncio_detailed(
 ) -> Response[Any | ChatTitleResponse | HTTPValidationError]:
     """Post Chat Title
 
-     Generate a title for a chat based on the first message.
+     Generate a title for a chat based on the first message
 
     Args:
         body (ChatTitleRequest):
@@ -157,7 +157,7 @@ async def asyncio(
 ) -> Any | ChatTitleResponse | HTTPValidationError | None:
     """Post Chat Title
 
-     Generate a title for a chat based on the first message.
+     Generate a title for a chat based on the first message
 
     Args:
         body (ChatTitleRequest):

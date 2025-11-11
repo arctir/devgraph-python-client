@@ -61,7 +61,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Chat Suggestion
 
-     Delete a chat suggestion. Can only delete user's own suggestions (not system ones).
+     Delete a chat suggestion owned by the user
 
     Args:
         suggestion_id (UUID):
@@ -92,7 +92,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Chat Suggestion
 
-     Delete a chat suggestion. Can only delete user's own suggestions (not system ones).
+     Delete a chat suggestion owned by the user
 
     Args:
         suggestion_id (UUID):
@@ -118,7 +118,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Chat Suggestion
 
-     Delete a chat suggestion. Can only delete user's own suggestions (not system ones).
+     Delete a chat suggestion owned by the user
 
     Args:
         suggestion_id (UUID):
@@ -147,7 +147,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Chat Suggestion
 
-     Delete a chat suggestion. Can only delete user's own suggestions (not system ones).
+     Delete a chat suggestion owned by the user
 
     Args:
         suggestion_id (UUID):

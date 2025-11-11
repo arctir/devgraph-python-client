@@ -58,7 +58,7 @@ def sync_detailed(
 ) -> Response[Any | list[ApiTokenResponse]]:
     """Get Tokens
 
-     Get all API tokens for the authenticated user.
+     List all API tokens for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -83,7 +83,7 @@ def sync(
 ) -> Any | list[ApiTokenResponse] | None:
     """Get Tokens
 
-     Get all API tokens for the authenticated user.
+     List all API tokens for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -104,7 +104,7 @@ async def asyncio_detailed(
 ) -> Response[Any | list[ApiTokenResponse]]:
     """Get Tokens
 
-     Get all API tokens for the authenticated user.
+     List all API tokens for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -127,7 +127,7 @@ async def asyncio(
 ) -> Any | list[ApiTokenResponse] | None:
     """Get Tokens
 
-     Get all API tokens for the authenticated user.
+     List all API tokens for the authenticated user
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

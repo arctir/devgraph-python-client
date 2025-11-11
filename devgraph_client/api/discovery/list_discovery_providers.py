@@ -53,10 +53,7 @@ def sync_detailed(
 ) -> Response[Any | DiscoveryProvidersListResponse]:
     """List Discovery Providers
 
-     List all available discovery provider types with their configuration schemas.
-
-    This endpoint discovers all registered discovery providers using the plugin system
-    and returns their metadata including JSON schemas for configuration.
+     List all available discovery provider types with their configuration schemas
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -81,10 +78,7 @@ def sync(
 ) -> Any | DiscoveryProvidersListResponse | None:
     """List Discovery Providers
 
-     List all available discovery provider types with their configuration schemas.
-
-    This endpoint discovers all registered discovery providers using the plugin system
-    and returns their metadata including JSON schemas for configuration.
+     List all available discovery provider types with their configuration schemas
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -105,10 +99,7 @@ async def asyncio_detailed(
 ) -> Response[Any | DiscoveryProvidersListResponse]:
     """List Discovery Providers
 
-     List all available discovery provider types with their configuration schemas.
-
-    This endpoint discovers all registered discovery providers using the plugin system
-    and returns their metadata including JSON schemas for configuration.
+     List all available discovery provider types with their configuration schemas
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -131,10 +122,7 @@ async def asyncio(
 ) -> Any | DiscoveryProvidersListResponse | None:
     """List Discovery Providers
 
-     List all available discovery provider types with their configuration schemas.
-
-    This endpoint discovers all registered discovery providers using the plugin system
-    and returns their metadata including JSON schemas for configuration.
+     List all available discovery provider types with their configuration schemas
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

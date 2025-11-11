@@ -61,7 +61,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Mcp Tool Association
 
-     Delete an MCP tool-entity association.
+     Delete an MCP tool-entity association
 
     Args:
         association_id (UUID):
@@ -92,7 +92,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Mcp Tool Association
 
-     Delete an MCP tool-entity association.
+     Delete an MCP tool-entity association
 
     Args:
         association_id (UUID):
@@ -118,7 +118,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Mcp Tool Association
 
-     Delete an MCP tool-entity association.
+     Delete an MCP tool-entity association
 
     Args:
         association_id (UUID):
@@ -147,7 +147,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Mcp Tool Association
 
-     Delete an MCP tool-entity association.
+     Delete an MCP tool-entity association
 
     Args:
         association_id (UUID):

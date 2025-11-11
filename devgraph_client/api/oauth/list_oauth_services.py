@@ -70,6 +70,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | OAuthServiceListResponse]:
     """List Oauth Services
 
+     List all OAuth service configurations
+
     Args:
         active_only (bool | Unset): Only return active services Default: True.
 
@@ -99,6 +101,8 @@ def sync(
 ) -> Any | HTTPValidationError | OAuthServiceListResponse | None:
     """List Oauth Services
 
+     List all OAuth service configurations
+
     Args:
         active_only (bool | Unset): Only return active services Default: True.
 
@@ -122,6 +126,8 @@ async def asyncio_detailed(
     active_only: bool | Unset = True,
 ) -> Response[Any | HTTPValidationError | OAuthServiceListResponse]:
     """List Oauth Services
+
+     List all OAuth service configurations
 
     Args:
         active_only (bool | Unset): Only return active services Default: True.
@@ -149,6 +155,8 @@ async def asyncio(
     active_only: bool | Unset = True,
 ) -> Any | HTTPValidationError | OAuthServiceListResponse | None:
     """List Oauth Services
+
+     List all OAuth service configurations
 
     Args:
         active_only (bool | Unset): Only return active services Default: True.

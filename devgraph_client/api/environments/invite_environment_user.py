@@ -74,7 +74,7 @@ def sync_detailed(
 ) -> Response[Any | EnvironmentUserResponse | HTTPValidationError]:
     """Invite Environment User
 
-     Invite a user to an environment (organization).
+     Invite a user to an environment
 
     Args:
         environment_id (UUID):
@@ -108,7 +108,7 @@ def sync(
 ) -> Any | EnvironmentUserResponse | HTTPValidationError | None:
     """Invite Environment User
 
-     Invite a user to an environment (organization).
+     Invite a user to an environment
 
     Args:
         environment_id (UUID):
@@ -137,7 +137,7 @@ async def asyncio_detailed(
 ) -> Response[Any | EnvironmentUserResponse | HTTPValidationError]:
     """Invite Environment User
 
-     Invite a user to an environment (organization).
+     Invite a user to an environment
 
     Args:
         environment_id (UUID):
@@ -169,7 +169,7 @@ async def asyncio(
 ) -> Any | EnvironmentUserResponse | HTTPValidationError | None:
     """Invite Environment User
 
-     Invite a user to an environment (organization).
+     Invite a user to an environment
 
     Args:
         environment_id (UUID):

@@ -60,13 +60,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Get Discovery Provider Config Schema
 
-     Get the configuration schema for a specific discovery provider type.
-
-    Args:
-        provider_type: The type identifier of the provider (e.g., 'github', 'gitlab')
-
-    Returns:
-        JSON schema for the provider's configuration
+     Get the configuration schema for a specific discovery provider type
 
     Args:
         provider_type (str):
@@ -97,13 +91,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Get Discovery Provider Config Schema
 
-     Get the configuration schema for a specific discovery provider type.
-
-    Args:
-        provider_type: The type identifier of the provider (e.g., 'github', 'gitlab')
-
-    Returns:
-        JSON schema for the provider's configuration
+     Get the configuration schema for a specific discovery provider type
 
     Args:
         provider_type (str):
@@ -129,13 +117,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Get Discovery Provider Config Schema
 
-     Get the configuration schema for a specific discovery provider type.
-
-    Args:
-        provider_type: The type identifier of the provider (e.g., 'github', 'gitlab')
-
-    Returns:
-        JSON schema for the provider's configuration
+     Get the configuration schema for a specific discovery provider type
 
     Args:
         provider_type (str):
@@ -164,13 +146,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Get Discovery Provider Config Schema
 
-     Get the configuration schema for a specific discovery provider type.
-
-    Args:
-        provider_type: The type identifier of the provider (e.g., 'github', 'gitlab')
-
-    Returns:
-        JSON schema for the provider's configuration
+     Get the configuration schema for a specific discovery provider type
 
     Args:
         provider_type (str):

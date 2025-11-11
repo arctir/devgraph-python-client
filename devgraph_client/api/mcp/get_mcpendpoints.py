@@ -58,7 +58,7 @@ def sync_detailed(
 ) -> Response[Any | list[MCPEndpointResponse]]:
     """Get Mcpendpoints
 
-     List all MCP Endpoint configurations for the authenticated user and environment.
+     List all MCP endpoint configurations for the authenticated user and environment
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -83,7 +83,7 @@ def sync(
 ) -> Any | list[MCPEndpointResponse] | None:
     """Get Mcpendpoints
 
-     List all MCP Endpoint configurations for the authenticated user and environment.
+     List all MCP endpoint configurations for the authenticated user and environment
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -104,7 +104,7 @@ async def asyncio_detailed(
 ) -> Response[Any | list[MCPEndpointResponse]]:
     """Get Mcpendpoints
 
-     List all MCP Endpoint configurations for the authenticated user and environment.
+     List all MCP endpoint configurations for the authenticated user and environment
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -127,7 +127,7 @@ async def asyncio(
 ) -> Any | list[MCPEndpointResponse] | None:
     """Get Mcpendpoints
 
-     List all MCP Endpoint configurations for the authenticated user and environment.
+     List all MCP endpoint configurations for the authenticated user and environment
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

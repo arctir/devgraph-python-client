@@ -62,6 +62,8 @@ def sync_detailed(
 ) -> Response[Any | ChatSession | HTTPValidationError]:
     """Get Chat
 
+     Retrieve a specific chat session by ID
+
     Args:
         chat_id (str):
 
@@ -91,6 +93,8 @@ def sync(
 ) -> Any | ChatSession | HTTPValidationError | None:
     """Get Chat
 
+     Retrieve a specific chat session by ID
+
     Args:
         chat_id (str):
 
@@ -114,6 +118,8 @@ async def asyncio_detailed(
     client: AuthenticatedClient,
 ) -> Response[Any | ChatSession | HTTPValidationError]:
     """Get Chat
+
+     Retrieve a specific chat session by ID
 
     Args:
         chat_id (str):
@@ -141,6 +147,8 @@ async def asyncio(
     client: AuthenticatedClient,
 ) -> Any | ChatSession | HTTPValidationError | None:
     """Get Chat
+
+     Retrieve a specific chat session by ID
 
     Args:
         chat_id (str):

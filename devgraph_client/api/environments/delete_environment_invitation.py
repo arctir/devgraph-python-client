@@ -63,7 +63,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Environment Invitation
 
-     Revoke a pending invitation to an environment (organization).
+     Revoke a pending invitation to an environment
 
     Args:
         environment_id (UUID):
@@ -97,7 +97,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Environment Invitation
 
-     Revoke a pending invitation to an environment (organization).
+     Revoke a pending invitation to an environment
 
     Args:
         environment_id (UUID):
@@ -126,7 +126,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Environment Invitation
 
-     Revoke a pending invitation to an environment (organization).
+     Revoke a pending invitation to an environment
 
     Args:
         environment_id (UUID):
@@ -158,7 +158,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Environment Invitation
 
-     Revoke a pending invitation to an environment (organization).
+     Revoke a pending invitation to an environment
 
     Args:
         environment_id (UUID):

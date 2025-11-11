@@ -110,7 +110,7 @@ def sync_detailed(
 ]:
     """Create Modelprovider
 
-     Create a new Model Provider configuration.
+     Create a new model provider configuration
 
     Args:
         body (ModelProviderCreate):
@@ -148,7 +148,7 @@ def sync(
 ):
     """Create Modelprovider
 
-     Create a new Model Provider configuration.
+     Create a new model provider configuration
 
     Args:
         body (ModelProviderCreate):
@@ -176,7 +176,7 @@ async def asyncio_detailed(
 ]:
     """Create Modelprovider
 
-     Create a new Model Provider configuration.
+     Create a new model provider configuration
 
     Args:
         body (ModelProviderCreate):
@@ -212,7 +212,7 @@ async def asyncio(
 ):
     """Create Modelprovider
 
-     Create a new Model Provider configuration.
+     Create a new model provider configuration
 
     Args:
         body (ModelProviderCreate):

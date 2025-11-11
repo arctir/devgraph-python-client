@@ -65,7 +65,7 @@ def sync_detailed(
 ) -> Response[Any | EnvironmentUserResponse | HTTPValidationError]:
     """Get Environment User
 
-     Get a specific environment user.
+     Get a specific environment user by ID
 
     Args:
         environment_id (UUID):
@@ -99,7 +99,7 @@ def sync(
 ) -> Any | EnvironmentUserResponse | HTTPValidationError | None:
     """Get Environment User
 
-     Get a specific environment user.
+     Get a specific environment user by ID
 
     Args:
         environment_id (UUID):
@@ -128,7 +128,7 @@ async def asyncio_detailed(
 ) -> Response[Any | EnvironmentUserResponse | HTTPValidationError]:
     """Get Environment User
 
-     Get a specific environment user.
+     Get a specific environment user by ID
 
     Args:
         environment_id (UUID):
@@ -160,7 +160,7 @@ async def asyncio(
 ) -> Any | EnvironmentUserResponse | HTTPValidationError | None:
     """Get Environment User
 
-     Get a specific environment user.
+     Get a specific environment user by ID
 
     Args:
         environment_id (UUID):

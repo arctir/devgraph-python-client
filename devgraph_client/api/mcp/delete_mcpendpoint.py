@@ -61,7 +61,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Mcpendpoint
 
-     Delete a specific MCP Endpoint configuration by ID.
+     Delete a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -92,7 +92,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Mcpendpoint
 
-     Delete a specific MCP Endpoint configuration by ID.
+     Delete a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -118,7 +118,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Mcpendpoint
 
-     Delete a specific MCP Endpoint configuration by ID.
+     Delete a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):
@@ -147,7 +147,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Mcpendpoint
 
-     Delete a specific MCP Endpoint configuration by ID.
+     Delete a specific MCP endpoint configuration by ID
 
     Args:
         mcpendpoint_id (UUID):

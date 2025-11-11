@@ -71,7 +71,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | MCPToolEntityAssociationResponse]:
     """Create Mcp Tool Association
 
-     Create an association between an MCP tool and an entity definition.
+     Create an association between an MCP tool and an entity definition
 
     Args:
         body (MCPToolEntityAssociationCreate):
@@ -102,7 +102,7 @@ def sync(
 ) -> Any | HTTPValidationError | MCPToolEntityAssociationResponse | None:
     """Create Mcp Tool Association
 
-     Create an association between an MCP tool and an entity definition.
+     Create an association between an MCP tool and an entity definition
 
     Args:
         body (MCPToolEntityAssociationCreate):
@@ -128,7 +128,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | MCPToolEntityAssociationResponse]:
     """Create Mcp Tool Association
 
-     Create an association between an MCP tool and an entity definition.
+     Create an association between an MCP tool and an entity definition
 
     Args:
         body (MCPToolEntityAssociationCreate):
@@ -157,7 +157,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | MCPToolEntityAssociationResponse | None:
     """Create Mcp Tool Association
 
-     Create an association between an MCP tool and an entity definition.
+     Create an association between an MCP tool and an entity definition
 
     Args:
         body (MCPToolEntityAssociationCreate):
