@@ -1,7 +1,5 @@
 """Basic tests for the Devgraph client."""
 
-import pytest
-
 
 def test_import():
     """Test that the client can be imported."""
