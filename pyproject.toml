@@ -1,59 +1,26 @@
 [tool.poetry]
 name = "devgraph-client"
-version = "0.1.0"
-description = "Auto-generated Python client for Devgraph API"
-authors = ["Arctir <hello@arctir.com>"]
+version = "1.0.0-beta.6"
+description = "A client library for accessing Devgraph AI API"
+authors = []
 readme = "README.md"
-packages = [{include = "devgraph_client", from = "src"}]
-license = "Apache-2.0"
-homepage = "https://github.com/arctir/devgraph-python-client"
-repository = "https://github.com/arctir/devgraph-python-client"
-documentation = "https://docs.devgraph.ai"
-keywords = ["devgraph", "api", "client", "sdk"]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: Apache Software License",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
+packages = [
+    { include = "devgraph_client" },
 ]
+include = ["devgraph_client/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-httpx = "^0.27.0"
-pydantic = "^2.0.0"
+httpx = ">=0.23.0,<0.29.0"
+attrs = ">=22.2.0"
 python-dateutil = "^2.8.0"
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
-pytest-asyncio = "^0.23.0"
-pytest-cov = "^4.1.0"
-mypy = "^1.8.0"
-ruff = "^0.3.0"
-types-python-dateutil = "^2.8.0"
-
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
-line-length = 100
-target-version = "py310"
+line-length = 120
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "N", "W", "UP"]
-ignore = ["E501"]
-
-[tool.mypy]
-python_version = "3.10"
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = false
-check_untyped_defs = true
-
-[tool.pytest.ini_options]
-asyncio_mode = "auto"
-testpaths = ["tests"]
-addopts = "-v --cov=src/devgraph_client --cov-report=term-missing"
+select = ["F", "I", "UP"]
