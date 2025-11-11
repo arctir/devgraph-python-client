@@ -71,7 +71,8 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete an entity definition
 
-     Deletes an entity definition and all its versions. Requires 'delete:entitydefinitions' permission.
+     Soft deletes an entity definition, all its versions, and optionally marks associated entities as
+    orphans
 
     Args:
         definition_id (UUID):
@@ -106,7 +107,8 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete an entity definition
 
-     Deletes an entity definition and all its versions. Requires 'delete:entitydefinitions' permission.
+     Soft deletes an entity definition, all its versions, and optionally marks associated entities as
+    orphans
 
     Args:
         definition_id (UUID):
@@ -136,7 +138,8 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete an entity definition
 
-     Deletes an entity definition and all its versions. Requires 'delete:entitydefinitions' permission.
+     Soft deletes an entity definition, all its versions, and optionally marks associated entities as
+    orphans
 
     Args:
         definition_id (UUID):
@@ -169,7 +172,8 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete an entity definition
 
-     Deletes an entity definition and all its versions. Requires 'delete:entitydefinitions' permission.
+     Soft deletes an entity definition, all its versions, and optionally marks associated entities as
+    orphans
 
     Args:
         definition_id (UUID):

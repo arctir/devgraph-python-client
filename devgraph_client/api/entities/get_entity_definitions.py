@@ -58,8 +58,7 @@ def sync_detailed(
 ) -> Response[Any | list[EntityDefinitionResponse]]:
     """Retrieve all entity definitions with their versions
 
-     Fetches a list of all entity definitions and their associated versions from the database. Requires
-    'list:entitydefinitions' permission.
+     Fetches a list of all entity definitions with versions, ordered by group and kind
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -84,8 +83,7 @@ def sync(
 ) -> Any | list[EntityDefinitionResponse] | None:
     """Retrieve all entity definitions with their versions
 
-     Fetches a list of all entity definitions and their associated versions from the database. Requires
-    'list:entitydefinitions' permission.
+     Fetches a list of all entity definitions with versions, ordered by group and kind
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -106,8 +104,7 @@ async def asyncio_detailed(
 ) -> Response[Any | list[EntityDefinitionResponse]]:
     """Retrieve all entity definitions with their versions
 
-     Fetches a list of all entity definitions and their associated versions from the database. Requires
-    'list:entitydefinitions' permission.
+     Fetches a list of all entity definitions with versions, ordered by group and kind
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -130,8 +127,7 @@ async def asyncio(
 ) -> Any | list[EntityDefinitionResponse] | None:
     """Retrieve all entity definitions with their versions
 
-     Fetches a list of all entity definitions and their associated versions from the database. Requires
-    'list:entitydefinitions' permission.
+     Fetches a list of all entity definitions with versions, ordered by group and kind
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.

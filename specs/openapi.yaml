@@ -2,15 +2,15 @@ openapi: 3.1.0
 info:
   title: Devgraph AI API
   description: The Devgraph AI ontology engine and entity management API
-  version: 1.0.0-beta.8
+  version: 1.0.0-beta.11
 paths:
   /api/v1/entities/definitions:
     get:
       tags:
       - entities
       summary: Retrieve all entity definitions with their versions
-      description: Fetches a list of all entity definitions and their associated versions
-        from the database. Requires 'list:entitydefinitions' permission.
+      description: Fetches a list of all entity definitions with versions, ordered
+        by group and kind
       operationId: get_entity_definitions
       responses:
         '200':
@@ -30,6 +30,7 @@ paths:
       tags:
       - entities
       summary: Create Entity Definition
+      description: Create a new entity definition with schema and storage configuration
       operationId: create_entity_definition
       requestBody:
         content:
@@ -59,8 +60,8 @@ paths:
       tags:
       - entities
       summary: Delete an entity definition
-      description: Deletes an entity definition and all its versions. Requires 'delete:entitydefinitions'
-        permission.
+      description: Soft deletes an entity definition, all its versions, and optionally
+        marks associated entities as orphans
       operationId: delete_entity_definition
       security:
       - OAuth2PasswordBearer: []

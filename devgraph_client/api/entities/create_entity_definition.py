@@ -71,6 +71,8 @@ def sync_detailed(
 ) -> Response[Any | EntityDefinitionResponse | HTTPValidationError]:
     """Create Entity Definition
 
+     Create a new entity definition with schema and storage configuration
+
     Args:
         body (EntityDefinitionSpec):
 
@@ -100,6 +102,8 @@ def sync(
 ) -> Any | EntityDefinitionResponse | HTTPValidationError | None:
     """Create Entity Definition
 
+     Create a new entity definition with schema and storage configuration
+
     Args:
         body (EntityDefinitionSpec):
 
@@ -123,6 +127,8 @@ async def asyncio_detailed(
     body: EntityDefinitionSpec,
 ) -> Response[Any | EntityDefinitionResponse | HTTPValidationError]:
     """Create Entity Definition
+
+     Create a new entity definition with schema and storage configuration
 
     Args:
         body (EntityDefinitionSpec):
@@ -150,6 +156,8 @@ async def asyncio(
     body: EntityDefinitionSpec,
 ) -> Any | EntityDefinitionResponse | HTTPValidationError | None:
     """Create Entity Definition
+
+     Create a new entity definition with schema and storage configuration
 
     Args:
         body (EntityDefinitionSpec):
