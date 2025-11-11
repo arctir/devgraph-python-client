@@ -110,11 +110,9 @@ jobs:
             git push origin "v${CLIENT_VERSION}" --force
             echo "✓ Tagged as v${CLIENT_VERSION}"
 
-            # Build and publish to GitHub Package Registry
+            # Build package
             poetry build
-            poetry config repositories.github https://pypi.pkg.github.com/arctir
-            poetry publish -r github -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-            echo "✓ Published to GitHub Package Registry"
+            echo "✓ Built package (publishing to GitHub Packages requires manual setup)"
           else
             echo "No changes to commit"
           fi
