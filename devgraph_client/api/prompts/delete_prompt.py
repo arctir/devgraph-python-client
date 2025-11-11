@@ -24,9 +24,9 @@ def _get_kwargs(
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
 ) -> Any | HTTPValidationError | None:
-    if response.status_code == 200:
-        response_200 = response.json()
-        return response_200
+    if response.status_code == 204:
+        response_204 = cast(Any, None)
+        return response_204
 
     if response.status_code == 404:
         response_404 = cast(Any, None)
@@ -61,7 +61,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Prompt
 
-     Delete a specific prompt by ID.
+     Soft delete a prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -92,7 +92,7 @@ def sync(
 ) -> Any | HTTPValidationError | None:
     """Delete Prompt
 
-     Delete a specific prompt by ID.
+     Soft delete a prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -118,7 +118,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError]:
     """Delete Prompt
 
-     Delete a specific prompt by ID.
+     Soft delete a prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -147,7 +147,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | None:
     """Delete Prompt
 
-     Delete a specific prompt by ID.
+     Soft delete a prompt template by ID
 
     Args:
         prompt_id (UUID):
