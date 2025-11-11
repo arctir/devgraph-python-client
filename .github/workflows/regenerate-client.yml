@@ -120,6 +120,9 @@ jobs:
               dist/*
 
             echo "✓ Package built and published"
+          else
+            echo "No changes to commit"
+          fi
 
       - name: Create summary
         if: always()
