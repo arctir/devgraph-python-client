@@ -110,19 +110,15 @@ jobs:
             # Build package
             poetry build
 
-            # Publish to GitHub Packages
-            pip install twine
-            twine upload \
-              --repository-url https://upload.pypi.org/github/${{ github.repository_owner }}/ \
-              --username ${{ github.actor }} \
-              --password ${{ secrets.GITHUB_TOKEN }} \
-              --skip-existing \
-              dist/*
-
-            echo "✓ Package built and published"
+            echo "✓ Package built"
           else
             echo "No changes to commit"
           fi
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1 # Handles OIDC automatically
+        with:
+          repository-url: https://upload.pypi.org/legacy/ # Default for PyPI
 
       - name: Create summary
         if: always()
