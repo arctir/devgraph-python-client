@@ -109,17 +109,17 @@ jobs:
 
             # Build package
             poetry build
-        
-      - name: Publish to GitHub Packages
-        run: |
-          pip install twine
-          twine upload \
-            --repository-url https://upload.pypi.org/github/${{ github.repository_owner }}/ \
-            --username ${{ github.actor }} \
-            --password ${{ secrets.GITHUB_TOKEN }} \
-            --skip-existing \
-            dist/*
-          echo "✓ Published to GitHub Packages"
+
+            # Publish to GitHub Packages
+            pip install twine
+            twine upload \
+              --repository-url https://upload.pypi.org/github/${{ github.repository_owner }}/ \
+              --username ${{ github.actor }} \
+              --password ${{ secrets.GITHUB_TOKEN }} \
+              --skip-existing \
+              dist/*
+
+            echo "✓ Package built and published"
 
       - name: Create summary
         if: always()
