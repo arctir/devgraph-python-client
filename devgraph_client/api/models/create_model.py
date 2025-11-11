@@ -71,7 +71,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | ModelResponse]:
     """Create Model
 
-     Create a new AI model configuration in the environment
+     Create a new AI model configuration with provider details in the environment
 
     Args:
         body (ModelCreate):
@@ -102,7 +102,7 @@ def sync(
 ) -> Any | HTTPValidationError | ModelResponse | None:
     """Create Model
 
-     Create a new AI model configuration in the environment
+     Create a new AI model configuration with provider details in the environment
 
     Args:
         body (ModelCreate):
@@ -128,7 +128,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | ModelResponse]:
     """Create Model
 
-     Create a new AI model configuration in the environment
+     Create a new AI model configuration with provider details in the environment
 
     Args:
         body (ModelCreate):
@@ -157,7 +157,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | ModelResponse | None:
     """Create Model
 
-     Create a new AI model configuration in the environment
+     Create a new AI model configuration with provider details in the environment
 
     Args:
         body (ModelCreate):
