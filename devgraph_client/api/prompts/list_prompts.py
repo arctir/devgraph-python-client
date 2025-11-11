@@ -80,7 +80,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | list[PromptResponse]]:
     """List Prompts
 
-     List all prompts for the environment.
+     List all prompt templates for the environment, optionally filtered by active status
 
     Args:
         active (NullBooleanEnum | Unset):
@@ -111,7 +111,7 @@ def sync(
 ) -> Any | HTTPValidationError | list[PromptResponse] | None:
     """List Prompts
 
-     List all prompts for the environment.
+     List all prompt templates for the environment, optionally filtered by active status
 
     Args:
         active (NullBooleanEnum | Unset):
@@ -137,7 +137,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | list[PromptResponse]]:
     """List Prompts
 
-     List all prompts for the environment.
+     List all prompt templates for the environment, optionally filtered by active status
 
     Args:
         active (NullBooleanEnum | Unset):
@@ -166,7 +166,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | list[PromptResponse] | None:
     """List Prompts
 
-     List all prompts for the environment.
+     List all prompt templates for the environment, optionally filtered by active status
 
     Args:
         active (NullBooleanEnum | Unset):

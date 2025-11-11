@@ -51,7 +51,7 @@ def sync_detailed(
 ) -> Response[Any | PromptResponse]:
     """Get System Default Prompt
 
-     Get the built-in system default prompt.
+     Retrieve the system default prompt template
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -76,7 +76,7 @@ def sync(
 ) -> Any | PromptResponse | None:
     """Get System Default Prompt
 
-     Get the built-in system default prompt.
+     Retrieve the system default prompt template
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -97,7 +97,7 @@ async def asyncio_detailed(
 ) -> Response[Any | PromptResponse]:
     """Get System Default Prompt
 
-     Get the built-in system default prompt.
+     Retrieve the system default prompt template
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -120,7 +120,7 @@ async def asyncio(
 ) -> Any | PromptResponse | None:
     """Get System Default Prompt
 
-     Get the built-in system default prompt.
+     Retrieve the system default prompt template
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
