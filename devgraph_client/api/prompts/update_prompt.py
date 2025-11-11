@@ -74,7 +74,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | PromptResponse]:
     """Update Prompt
 
-     Update a specific prompt by ID.
+     Update an existing prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -108,7 +108,7 @@ def sync(
 ) -> Any | HTTPValidationError | PromptResponse | None:
     """Update Prompt
 
-     Update a specific prompt by ID.
+     Update an existing prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -137,7 +137,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | PromptResponse]:
     """Update Prompt
 
-     Update a specific prompt by ID.
+     Update an existing prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -169,7 +169,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | PromptResponse | None:
     """Update Prompt
 
-     Update a specific prompt by ID.
+     Update an existing prompt template by ID
 
     Args:
         prompt_id (UUID):
