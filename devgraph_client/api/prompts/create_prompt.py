@@ -71,7 +71,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | PromptResponse]:
     """Create Prompt
 
-     Create a new prompt for the environment.
+     Create a new prompt template in the environment
 
     Args:
         body (PromptCreate):
@@ -102,7 +102,7 @@ def sync(
 ) -> Any | HTTPValidationError | PromptResponse | None:
     """Create Prompt
 
-     Create a new prompt for the environment.
+     Create a new prompt template in the environment
 
     Args:
         body (PromptCreate):
@@ -128,7 +128,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | PromptResponse]:
     """Create Prompt
 
-     Create a new prompt for the environment.
+     Create a new prompt template in the environment
 
     Args:
         body (PromptCreate):
@@ -157,7 +157,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | PromptResponse | None:
     """Create Prompt
 
-     Create a new prompt for the environment.
+     Create a new prompt template in the environment
 
     Args:
         body (PromptCreate):
