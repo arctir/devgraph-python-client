@@ -63,7 +63,7 @@ def sync_detailed(
 ) -> Response[Any | HTTPValidationError | PromptResponse]:
     """Get Prompt
 
-     Get a specific prompt by ID.
+     Retrieve a specific prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -94,7 +94,7 @@ def sync(
 ) -> Any | HTTPValidationError | PromptResponse | None:
     """Get Prompt
 
-     Get a specific prompt by ID.
+     Retrieve a specific prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -120,7 +120,7 @@ async def asyncio_detailed(
 ) -> Response[Any | HTTPValidationError | PromptResponse]:
     """Get Prompt
 
-     Get a specific prompt by ID.
+     Retrieve a specific prompt template by ID
 
     Args:
         prompt_id (UUID):
@@ -149,7 +149,7 @@ async def asyncio(
 ) -> Any | HTTPValidationError | PromptResponse | None:
     """Get Prompt
 
-     Get a specific prompt by ID.
+     Retrieve a specific prompt template by ID
 
     Args:
         prompt_id (UUID):
