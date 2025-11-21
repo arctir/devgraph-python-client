@@ -14,10 +14,13 @@ def _get_kwargs(
     uid: str,
     *,
     namespace: str | Unset = "default",
+    depth: int | Unset = 1,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
 
     params["namespace"] = namespace
+
+    params["depth"] = depth
 
     params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
 
@@ -69,6 +72,7 @@ def sync_detailed(
     *,
     client: AuthenticatedClient,
     namespace: str | Unset = "default",
+    depth: int | Unset = 1,
 ) -> Response[Any | EntityWithRelationsResponse | HTTPValidationError]:
     """Retrieve a specific entity by UID with its relations
 
@@ -78,6 +82,8 @@ def sync_detailed(
     Args:
         uid (str):
         namespace (str | Unset):  Default: 'default'.
+        depth (int | Unset): Number of relationship hops to traverse (1-5). Higher values return
+            more related entities but may be slower. Default: 1.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -90,6 +96,7 @@ def sync_detailed(
     kwargs = _get_kwargs(
         uid=uid,
         namespace=namespace,
+        depth=depth,
     )
 
     response = client.get_httpx_client().request(
@@ -104,6 +111,7 @@ def sync(
     *,
     client: AuthenticatedClient,
     namespace: str | Unset = "default",
+    depth: int | Unset = 1,
 ) -> Any | EntityWithRelationsResponse | HTTPValidationError | None:
     """Retrieve a specific entity by UID with its relations
 
@@ -113,6 +121,8 @@ def sync(
     Args:
         uid (str):
         namespace (str | Unset):  Default: 'default'.
+        depth (int | Unset): Number of relationship hops to traverse (1-5). Higher values return
+            more related entities but may be slower. Default: 1.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -126,6 +136,7 @@ def sync(
         uid=uid,
         client=client,
         namespace=namespace,
+        depth=depth,
     ).parsed
 
 
@@ -134,6 +145,7 @@ async def asyncio_detailed(
     *,
     client: AuthenticatedClient,
     namespace: str | Unset = "default",
+    depth: int | Unset = 1,
 ) -> Response[Any | EntityWithRelationsResponse | HTTPValidationError]:
     """Retrieve a specific entity by UID with its relations
 
@@ -143,6 +155,8 @@ async def asyncio_detailed(
     Args:
         uid (str):
         namespace (str | Unset):  Default: 'default'.
+        depth (int | Unset): Number of relationship hops to traverse (1-5). Higher values return
+            more related entities but may be slower. Default: 1.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -155,6 +169,7 @@ async def asyncio_detailed(
     kwargs = _get_kwargs(
         uid=uid,
         namespace=namespace,
+        depth=depth,
     )
 
     response = await client.get_async_httpx_client().request(**kwargs)
@@ -167,6 +182,7 @@ async def asyncio(
     *,
     client: AuthenticatedClient,
     namespace: str | Unset = "default",
+    depth: int | Unset = 1,
 ) -> Any | EntityWithRelationsResponse | HTTPValidationError | None:
     """Retrieve a specific entity by UID with its relations
 
@@ -176,6 +192,8 @@ async def asyncio(
     Args:
         uid (str):
         namespace (str | Unset):  Default: 'default'.
+        depth (int | Unset): Number of relationship hops to traverse (1-5). Higher values return
+            more related entities but may be slower. Default: 1.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -190,5 +208,6 @@ async def asyncio(
             uid=uid,
             client=client,
             namespace=namespace,
+            depth=depth,
         )
     ).parsed

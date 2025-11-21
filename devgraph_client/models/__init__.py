@@ -116,6 +116,7 @@ from .prompt_response import PromptResponse
 from .prompt_update import PromptUpdate
 from .provider_type_version_info import ProviderTypeVersionInfo
 from .provider_version_info import ProviderVersionInfo
+from .renderer_manifest import RendererManifest
 from .response_format import ResponseFormat
 from .response_format_type import ResponseFormatType
 from .subscription_response import SubscriptionResponse
@@ -250,6 +251,7 @@ __all__ = (
     "PromptUpdate",
     "ProviderTypeVersionInfo",
     "ProviderVersionInfo",
+    "RendererManifest",
     "ResponseFormat",
     "ResponseFormatType",
     "SubscriptionResponse",
