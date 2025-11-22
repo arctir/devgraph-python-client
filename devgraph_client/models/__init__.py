@@ -89,6 +89,9 @@ from .mcp_tool_entity_association_create import MCPToolEntityAssociationCreate
 from .mcp_tool_entity_association_create_tool_config_type_0 import MCPToolEntityAssociationCreateToolConfigType0
 from .mcp_tool_entity_association_response import MCPToolEntityAssociationResponse
 from .mcp_tool_entity_association_response_tool_config_type_0 import MCPToolEntityAssociationResponseToolConfigType0
+from .mcp_tool_info import MCPToolInfo
+from .mcp_tools_response import MCPToolsResponse
+from .mcp_tools_response_tools import MCPToolsResponseTools
 from .message_role import MessageRole
 from .migration_result import MigrationResult
 from .migration_results_response import MigrationResultsResponse
@@ -224,6 +227,9 @@ __all__ = (
     "MCPToolEntityAssociationCreateToolConfigType0",
     "MCPToolEntityAssociationResponse",
     "MCPToolEntityAssociationResponseToolConfigType0",
+    "MCPToolInfo",
+    "MCPToolsResponse",
+    "MCPToolsResponseTools",
     "MessageRole",
     "MigrationResult",
     "MigrationResultsResponse",
