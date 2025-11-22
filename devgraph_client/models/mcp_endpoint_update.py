@@ -31,6 +31,7 @@ class MCPEndpointUpdate:
         active (bool | None | Unset):
         allowed_tools (list[str] | None | Unset):
         denied_tools (list[str] | None | Unset):
+        allow_renderers (bool | None | Unset):
     """
 
     name: None | str | Unset = UNSET
@@ -44,6 +45,7 @@ class MCPEndpointUpdate:
     active: bool | None | Unset = UNSET
     allowed_tools: list[str] | None | Unset = UNSET
     denied_tools: list[str] | None | Unset = UNSET
+    allow_renderers: bool | None | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -125,6 +127,12 @@ class MCPEndpointUpdate:
         else:
             denied_tools = self.denied_tools
 
+        allow_renderers: bool | None | Unset
+        if isinstance(self.allow_renderers, Unset):
+            allow_renderers = UNSET
+        else:
+            allow_renderers = self.allow_renderers
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update({})
@@ -150,6 +158,8 @@ class MCPEndpointUpdate:
             field_dict["allowed_tools"] = allowed_tools
         if denied_tools is not UNSET:
             field_dict["denied_tools"] = denied_tools
+        if allow_renderers is not UNSET:
+            field_dict["allow_renderers"] = allow_renderers
 
         return field_dict
 
@@ -290,6 +300,15 @@ class MCPEndpointUpdate:
 
         denied_tools = _parse_denied_tools(d.pop("denied_tools", UNSET))
 
+        def _parse_allow_renderers(data: object) -> bool | None | Unset:
+            if data is None:
+                return data
+            if isinstance(data, Unset):
+                return data
+            return cast(bool | None | Unset, data)
+
+        allow_renderers = _parse_allow_renderers(d.pop("allow_renderers", UNSET))
+
         mcp_endpoint_update = cls(
             name=name,
             url=url,
@@ -302,6 +321,7 @@ class MCPEndpointUpdate:
             active=active,
             allowed_tools=allowed_tools,
             denied_tools=denied_tools,
+            allow_renderers=allow_renderers,
         )
 
         mcp_endpoint_update.additional_properties = d

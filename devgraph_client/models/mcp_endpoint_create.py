@@ -31,6 +31,7 @@ class MCPEndpointCreate:
         active (bool | Unset):  Default: True.
         allowed_tools (list[str] | None | Unset):
         denied_tools (list[str] | None | Unset):
+        allow_renderers (bool | Unset):  Default: False.
     """
 
     name: str
@@ -44,6 +45,7 @@ class MCPEndpointCreate:
     active: bool | Unset = True
     allowed_tools: list[str] | None | Unset = UNSET
     denied_tools: list[str] | None | Unset = UNSET
+    allow_renderers: bool | Unset = False
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -95,6 +97,8 @@ class MCPEndpointCreate:
         else:
             denied_tools = self.denied_tools
 
+        allow_renderers = self.allow_renderers
+
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
         field_dict.update(
@@ -121,6 +125,8 @@ class MCPEndpointCreate:
             field_dict["allowed_tools"] = allowed_tools
         if denied_tools is not UNSET:
             field_dict["denied_tools"] = denied_tools
+        if allow_renderers is not UNSET:
+            field_dict["allow_renderers"] = allow_renderers
 
         return field_dict
 
@@ -208,6 +214,8 @@ class MCPEndpointCreate:
 
         denied_tools = _parse_denied_tools(d.pop("denied_tools", UNSET))
 
+        allow_renderers = d.pop("allow_renderers", UNSET)
+
         mcp_endpoint_create = cls(
             name=name,
             url=url,
@@ -220,6 +228,7 @@ class MCPEndpointCreate:
             active=active,
             allowed_tools=allowed_tools,
             denied_tools=denied_tools,
+            allow_renderers=allow_renderers,
         )
 
         mcp_endpoint_create.additional_properties = d

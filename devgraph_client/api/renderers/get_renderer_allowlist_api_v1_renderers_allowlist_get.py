@@ -48,16 +48,14 @@ def _build_response(
 
 def sync_detailed(
     *,
-    client: AuthenticatedClient | Client,
+    client: AuthenticatedClient,
 ) -> Response[list[RendererManifest]]:
     """Get Renderer Allowlist
 
      Get the list of allowed renderer domains.
 
-    In production, this could be loaded from:
-    - Database
-    - Environment variables
-    - External config service
+    Returns static allowlist plus dynamically loaded domains from
+    MCP endpoints with allow_renderers enabled.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -78,16 +76,14 @@ def sync_detailed(
 
 def sync(
     *,
-    client: AuthenticatedClient | Client,
+    client: AuthenticatedClient,
 ) -> list[RendererManifest] | None:
     """Get Renderer Allowlist
 
      Get the list of allowed renderer domains.
 
-    In production, this could be loaded from:
-    - Database
-    - Environment variables
-    - External config service
+    Returns static allowlist plus dynamically loaded domains from
+    MCP endpoints with allow_renderers enabled.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -104,16 +100,14 @@ def sync(
 
 async def asyncio_detailed(
     *,
-    client: AuthenticatedClient | Client,
+    client: AuthenticatedClient,
 ) -> Response[list[RendererManifest]]:
     """Get Renderer Allowlist
 
      Get the list of allowed renderer domains.
 
-    In production, this could be loaded from:
-    - Database
-    - Environment variables
-    - External config service
+    Returns static allowlist plus dynamically loaded domains from
+    MCP endpoints with allow_renderers enabled.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
@@ -132,16 +126,14 @@ async def asyncio_detailed(
 
 async def asyncio(
     *,
-    client: AuthenticatedClient | Client,
+    client: AuthenticatedClient,
 ) -> list[RendererManifest] | None:
     """Get Renderer Allowlist
 
      Get the list of allowed renderer domains.
 
-    In production, this could be loaded from:
-    - Database
-    - Environment variables
-    - External config service
+    Returns static allowlist plus dynamically loaded domains from
+    MCP endpoints with allow_renderers enabled.
 
     Raises:
         errors.UnexpectedStatus: If the server returns an undocumented status code and Client.raise_on_unexpected_status is True.
