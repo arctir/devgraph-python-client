@@ -40,6 +40,8 @@ from .create_entities_bulk_response_create_entities_bulk import CreateEntitiesBu
 from .delta import Delta
 from .deprecated_provider_config import DeprecatedProviderConfig
 from .deprecated_providers_response import DeprecatedProvidersResponse
+from .discovery_image_list_response import DiscoveryImageListResponse
+from .discovery_image_response import DiscoveryImageResponse
 from .discovery_provider_metadata import DiscoveryProviderMetadata
 from .discovery_provider_metadata_config_schema import DiscoveryProviderMetadataConfigSchema
 from .discovery_providers_list_response import DiscoveryProvidersListResponse
@@ -180,6 +182,8 @@ __all__ = (
     "Delta",
     "DeprecatedProviderConfig",
     "DeprecatedProvidersResponse",
+    "DiscoveryImageListResponse",
+    "DiscoveryImageResponse",
     "DiscoveryProviderMetadata",
     "DiscoveryProviderMetadataConfigSchema",
     "DiscoveryProvidersListResponse",
