@@ -66,6 +66,8 @@ from .entity_spec import EntitySpec
 from .entity_status import EntityStatus
 from .entity_with_relations_response import EntityWithRelationsResponse
 from .environment_create import EnvironmentCreate
+from .environment_discovery_settings_response import EnvironmentDiscoverySettingsResponse
+from .environment_discovery_settings_update import EnvironmentDiscoverySettingsUpdate
 from .environment_response import EnvironmentResponse
 from .environment_status_response import EnvironmentStatusResponse
 from .environment_user_bulk_invite import EnvironmentUserBulkInvite
@@ -204,6 +206,8 @@ __all__ = (
     "EntityStatus",
     "EntityWithRelationsResponse",
     "EnvironmentCreate",
+    "EnvironmentDiscoverySettingsResponse",
+    "EnvironmentDiscoverySettingsUpdate",
     "EnvironmentResponse",
     "EnvironmentStatusResponse",
     "EnvironmentUserBulkInvite",
