@@ -10,6 +10,8 @@ from ..types import UNSET, Unset
 
 if TYPE_CHECKING:
     from ..models.entity_reference import EntityReference
+    from ..models.entity_relation_spec import EntityRelationSpec
+    from ..models.relation_metadata import RelationMetadata
 
 
 T = TypeVar("T", bound="EntityRelation")
@@ -23,12 +25,16 @@ class EntityRelation:
         source (EntityReference):
         target (EntityReference):
         namespace (str | Unset):  Default: 'default'.
+        metadata (RelationMetadata | Unset): Metadata for a relation, following Kubernetes-style conventions.
+        spec (EntityRelationSpec | Unset):
     """
 
     relation: str
     source: EntityReference
     target: EntityReference
     namespace: str | Unset = "default"
+    metadata: RelationMetadata | Unset = UNSET
+    spec: EntityRelationSpec | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -39,6 +45,14 @@ class EntityRelation:
         target = self.target.to_dict()
 
         namespace = self.namespace
+
+        metadata: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.metadata, Unset):
+            metadata = self.metadata.to_dict()
+
+        spec: dict[str, Any] | Unset = UNSET
+        if not isinstance(self.spec, Unset):
+            spec = self.spec.to_dict()
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -51,12 +65,18 @@ class EntityRelation:
         )
         if namespace is not UNSET:
             field_dict["namespace"] = namespace
+        if metadata is not UNSET:
+            field_dict["metadata"] = metadata
+        if spec is not UNSET:
+            field_dict["spec"] = spec
 
         return field_dict
 
     @classmethod
     def from_dict(cls: type[T], src_dict: Mapping[str, Any]) -> T:
         from ..models.entity_reference import EntityReference
+        from ..models.entity_relation_spec import EntityRelationSpec
+        from ..models.relation_metadata import RelationMetadata
 
         d = dict(src_dict)
         relation = d.pop("relation")
@@ -67,11 +87,27 @@ class EntityRelation:
 
         namespace = d.pop("namespace", UNSET)
 
+        _metadata = d.pop("metadata", UNSET)
+        metadata: RelationMetadata | Unset
+        if isinstance(_metadata, Unset):
+            metadata = UNSET
+        else:
+            metadata = RelationMetadata.from_dict(_metadata)
+
+        _spec = d.pop("spec", UNSET)
+        spec: EntityRelationSpec | Unset
+        if isinstance(_spec, Unset):
+            spec = UNSET
+        else:
+            spec = EntityRelationSpec.from_dict(_spec)
+
         entity_relation = cls(
             relation=relation,
             source=source,
             target=target,
             namespace=namespace,
+            metadata=metadata,
+            spec=spec,
         )
 
         entity_relation.additional_properties = d

@@ -61,6 +61,8 @@ from .entity_reference import EntityReference
 from .entity_reference_response import EntityReferenceResponse
 from .entity_relation import EntityRelation
 from .entity_relation_response import EntityRelationResponse
+from .entity_relation_response_spec import EntityRelationResponseSpec
+from .entity_relation_spec import EntityRelationSpec
 from .entity_response import EntityResponse
 from .entity_response_spec import EntityResponseSpec
 from .entity_result_set_response import EntityResultSetResponse
@@ -104,6 +106,8 @@ from .model_provider_create import ModelProviderCreate
 from .model_provider_update import ModelProviderUpdate
 from .model_response import ModelResponse
 from .model_update import ModelUpdate
+from .molecule_data import MoleculeData
+from .molecule_data_config_schema_type_0 import MoleculeDataConfigSchemaType0
 from .null_boolean_enum import NullBooleanEnum
 from .o_auth_authorization_request import OAuthAuthorizationRequest
 from .o_auth_authorization_response import OAuthAuthorizationResponse
@@ -115,6 +119,7 @@ from .o_auth_service_update import OAuthServiceUpdate
 from .o_auth_service_update_additional_params_type_0 import OAuthServiceUpdateAdditionalParamsType0
 from .o_auth_token_exchange import OAuthTokenExchange
 from .o_auth_token_response import OAuthTokenResponse
+from .oidc_configuration_response import OIDCConfigurationResponse
 from .open_ai_model_provider_create import OpenAIModelProviderCreate
 from .open_ai_model_provider_response import OpenAIModelProviderResponse
 from .pending_invitation_response import PendingInvitationResponse
@@ -123,6 +128,9 @@ from .prompt_response import PromptResponse
 from .prompt_update import PromptUpdate
 from .provider_type_version_info import ProviderTypeVersionInfo
 from .provider_version_info import ProviderVersionInfo
+from .relation_metadata import RelationMetadata
+from .relation_metadata_annotations import RelationMetadataAnnotations
+from .relation_metadata_labels import RelationMetadataLabels
 from .renderer_manifest import RendererManifest
 from .response_format import ResponseFormat
 from .response_format_type import ResponseFormatType
@@ -203,6 +211,8 @@ __all__ = (
     "EntityReferenceResponse",
     "EntityRelation",
     "EntityRelationResponse",
+    "EntityRelationResponseSpec",
+    "EntityRelationSpec",
     "EntityResponse",
     "EntityResponseSpec",
     "EntityResultSetResponse",
@@ -246,6 +256,8 @@ __all__ = (
     "ModelProviderUpdate",
     "ModelResponse",
     "ModelUpdate",
+    "MoleculeData",
+    "MoleculeDataConfigSchemaType0",
     "NullBooleanEnum",
     "OAuthAuthorizationRequest",
     "OAuthAuthorizationResponse",
@@ -257,6 +269,7 @@ __all__ = (
     "OAuthServiceUpdateAdditionalParamsType0",
     "OAuthTokenExchange",
     "OAuthTokenResponse",
+    "OIDCConfigurationResponse",
     "OpenAIModelProviderCreate",
     "OpenAIModelProviderResponse",
     "PendingInvitationResponse",
@@ -265,6 +278,9 @@ __all__ = (
     "PromptUpdate",
     "ProviderTypeVersionInfo",
     "ProviderVersionInfo",
+    "RelationMetadata",
+    "RelationMetadataAnnotations",
+    "RelationMetadataLabels",
     "RendererManifest",
     "ResponseFormat",
     "ResponseFormatType",

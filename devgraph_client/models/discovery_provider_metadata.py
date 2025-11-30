@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any, TypeVar, cast
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from attrs import define as _attrs_define
 from attrs import field as _attrs_field
@@ -24,14 +24,14 @@ class DiscoveryProviderMetadata:
         display_name (str):
         description (str):
         config_schema (DiscoveryProviderMetadataConfigSchema):
-        logo (None | str | Unset):
+        logo (Any | Unset):
     """
 
     type_: str
     display_name: str
     description: str
     config_schema: DiscoveryProviderMetadataConfigSchema
-    logo: None | str | Unset = UNSET
+    logo: Any | Unset = UNSET
     additional_properties: dict[str, Any] = _attrs_field(init=False, factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
@@ -43,11 +43,7 @@ class DiscoveryProviderMetadata:
 
         config_schema = self.config_schema.to_dict()
 
-        logo: None | str | Unset
-        if isinstance(self.logo, Unset):
-            logo = UNSET
-        else:
-            logo = self.logo
+        logo = self.logo
 
         field_dict: dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -77,14 +73,7 @@ class DiscoveryProviderMetadata:
 
         config_schema = DiscoveryProviderMetadataConfigSchema.from_dict(d.pop("config_schema"))
 
-        def _parse_logo(data: object) -> None | str | Unset:
-            if data is None:
-                return data
-            if isinstance(data, Unset):
-                return data
-            return cast(None | str | Unset, data)
-
-        logo = _parse_logo(d.pop("logo", UNSET))
+        logo = d.pop("logo", UNSET)
 
         discovery_provider_metadata = cls(
             type_=type_,
