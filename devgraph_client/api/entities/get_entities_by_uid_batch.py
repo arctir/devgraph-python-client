@@ -1,24 +1,27 @@
 from http import HTTPStatus
 from typing import Any, cast
-from urllib.parse import quote
 
 import httpx
 
 from ... import errors
 from ...client import AuthenticatedClient, Client
-from ...models.entity_with_relations_response import EntityWithRelationsResponse
+from ...models.entity_result_set_response import EntityResultSetResponse
 from ...models.http_validation_error import HTTPValidationError
 from ...types import UNSET, Response, Unset
 
 
 def _get_kwargs(
-    uid: str,
     *,
+    uids: list[str],
     namespace: str | Unset = "default",
     depth: int | Unset = 1,
     fields: None | str | Unset = UNSET,
 ) -> dict[str, Any]:
     params: dict[str, Any] = {}
+
+    json_uids = uids
+
+    params["uids"] = json_uids
 
     params["namespace"] = namespace
 
@@ -34,10 +37,8 @@ def _get_kwargs(
     params = {k: v for k, v in params.items() if v is not UNSET and v is not None}
 
     _kwargs: dict[str, Any] = {
-        "method": "get",
-        "url": "/api/v1/entities/uid/{uid}".format(
-            uid=quote(str(uid), safe=""),
-        ),
+        "method": "post",
+        "url": "/api/v1/entities/uid/batch",
         "params": params,
     }
 
@@ -46,9 +47,9 @@ def _get_kwargs(
 
 def _parse_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> Any | EntityWithRelationsResponse | HTTPValidationError | None:
+) -> Any | EntityResultSetResponse | HTTPValidationError | None:
     if response.status_code == 200:
-        response_200 = EntityWithRelationsResponse.from_dict(response.json())
+        response_200 = EntityResultSetResponse.from_dict(response.json())
 
         return response_200
 
@@ -69,7 +70,7 @@ def _parse_response(
 
 def _build_response(
     *, client: AuthenticatedClient | Client, response: httpx.Response
-) -> Response[Any | EntityWithRelationsResponse | HTTPValidationError]:
+) -> Response[Any | EntityResultSetResponse | HTTPValidationError]:
     return Response(
         status_code=HTTPStatus(response.status_code),
         content=response.content,
@@ -79,21 +80,21 @@ def _build_response(
 
 
 def sync_detailed(
-    uid: str,
     *,
     client: AuthenticatedClient,
+    uids: list[str],
     namespace: str | Unset = "default",
     depth: int | Unset = 1,
     fields: None | str | Unset = UNSET,
-) -> Response[Any | EntityWithRelationsResponse | HTTPValidationError]:
-    """Retrieve a specific entity by UID with its relations
+) -> Response[Any | EntityResultSetResponse | HTTPValidationError]:
+    """Retrieve multiple entities by UIDs in a single request
 
-     Fetches a specific entity by its unique identifier (UID), including related entities and relations.
-    Supports optional field projection. Requires 'read:entities' permission.
+     Fetches multiple entities by their unique identifiers (UIDs) in a single request. More efficient
+    than multiple individual requests. Requires 'read:entities' permission.
 
     Args:
-        uid (str):
-        namespace (str | Unset):  Default: 'default'.
+        uids (list[str]): List of entity UIDs to fetch
+        namespace (str | Unset): Namespace to query Default: 'default'.
         depth (int | Unset): Number of relationship hops to traverse (0-5). 0 = no relationships.
             Default: 1.
         fields (None | str | Unset):
@@ -103,11 +104,11 @@ def sync_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any | EntityWithRelationsResponse | HTTPValidationError]
+        Response[Any | EntityResultSetResponse | HTTPValidationError]
     """
 
     kwargs = _get_kwargs(
-        uid=uid,
+        uids=uids,
         namespace=namespace,
         depth=depth,
         fields=fields,
@@ -121,21 +122,21 @@ def sync_detailed(
 
 
 def sync(
-    uid: str,
     *,
     client: AuthenticatedClient,
+    uids: list[str],
     namespace: str | Unset = "default",
     depth: int | Unset = 1,
     fields: None | str | Unset = UNSET,
-) -> Any | EntityWithRelationsResponse | HTTPValidationError | None:
-    """Retrieve a specific entity by UID with its relations
+) -> Any | EntityResultSetResponse | HTTPValidationError | None:
+    """Retrieve multiple entities by UIDs in a single request
 
-     Fetches a specific entity by its unique identifier (UID), including related entities and relations.
-    Supports optional field projection. Requires 'read:entities' permission.
+     Fetches multiple entities by their unique identifiers (UIDs) in a single request. More efficient
+    than multiple individual requests. Requires 'read:entities' permission.
 
     Args:
-        uid (str):
-        namespace (str | Unset):  Default: 'default'.
+        uids (list[str]): List of entity UIDs to fetch
+        namespace (str | Unset): Namespace to query Default: 'default'.
         depth (int | Unset): Number of relationship hops to traverse (0-5). 0 = no relationships.
             Default: 1.
         fields (None | str | Unset):
@@ -145,12 +146,12 @@ def sync(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Any | EntityWithRelationsResponse | HTTPValidationError
+        Any | EntityResultSetResponse | HTTPValidationError
     """
 
     return sync_detailed(
-        uid=uid,
         client=client,
+        uids=uids,
         namespace=namespace,
         depth=depth,
         fields=fields,
@@ -158,21 +159,21 @@ def sync(
 
 
 async def asyncio_detailed(
-    uid: str,
     *,
     client: AuthenticatedClient,
+    uids: list[str],
     namespace: str | Unset = "default",
     depth: int | Unset = 1,
     fields: None | str | Unset = UNSET,
-) -> Response[Any | EntityWithRelationsResponse | HTTPValidationError]:
-    """Retrieve a specific entity by UID with its relations
+) -> Response[Any | EntityResultSetResponse | HTTPValidationError]:
+    """Retrieve multiple entities by UIDs in a single request
 
-     Fetches a specific entity by its unique identifier (UID), including related entities and relations.
-    Supports optional field projection. Requires 'read:entities' permission.
+     Fetches multiple entities by their unique identifiers (UIDs) in a single request. More efficient
+    than multiple individual requests. Requires 'read:entities' permission.
 
     Args:
-        uid (str):
-        namespace (str | Unset):  Default: 'default'.
+        uids (list[str]): List of entity UIDs to fetch
+        namespace (str | Unset): Namespace to query Default: 'default'.
         depth (int | Unset): Number of relationship hops to traverse (0-5). 0 = no relationships.
             Default: 1.
         fields (None | str | Unset):
@@ -182,11 +183,11 @@ async def asyncio_detailed(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Response[Any | EntityWithRelationsResponse | HTTPValidationError]
+        Response[Any | EntityResultSetResponse | HTTPValidationError]
     """
 
     kwargs = _get_kwargs(
-        uid=uid,
+        uids=uids,
         namespace=namespace,
         depth=depth,
         fields=fields,
@@ -198,21 +199,21 @@ async def asyncio_detailed(
 
 
 async def asyncio(
-    uid: str,
     *,
     client: AuthenticatedClient,
+    uids: list[str],
     namespace: str | Unset = "default",
     depth: int | Unset = 1,
     fields: None | str | Unset = UNSET,
-) -> Any | EntityWithRelationsResponse | HTTPValidationError | None:
-    """Retrieve a specific entity by UID with its relations
+) -> Any | EntityResultSetResponse | HTTPValidationError | None:
+    """Retrieve multiple entities by UIDs in a single request
 
-     Fetches a specific entity by its unique identifier (UID), including related entities and relations.
-    Supports optional field projection. Requires 'read:entities' permission.
+     Fetches multiple entities by their unique identifiers (UIDs) in a single request. More efficient
+    than multiple individual requests. Requires 'read:entities' permission.
 
     Args:
-        uid (str):
-        namespace (str | Unset):  Default: 'default'.
+        uids (list[str]): List of entity UIDs to fetch
+        namespace (str | Unset): Namespace to query Default: 'default'.
         depth (int | Unset): Number of relationship hops to traverse (0-5). 0 = no relationships.
             Default: 1.
         fields (None | str | Unset):
@@ -222,13 +223,13 @@ async def asyncio(
         httpx.TimeoutException: If the request takes longer than Client.timeout.
 
     Returns:
-        Any | EntityWithRelationsResponse | HTTPValidationError
+        Any | EntityResultSetResponse | HTTPValidationError
     """
 
     return (
         await asyncio_detailed(
-            uid=uid,
             client=client,
+            uids=uids,
             namespace=namespace,
             depth=depth,
             fields=fields,

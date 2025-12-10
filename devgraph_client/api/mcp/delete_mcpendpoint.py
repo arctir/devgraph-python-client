@@ -1,5 +1,6 @@
 from http import HTTPStatus
 from typing import Any, cast
+from urllib.parse import quote
 from uuid import UUID
 
 import httpx
@@ -15,7 +16,9 @@ def _get_kwargs(
 ) -> dict[str, Any]:
     _kwargs: dict[str, Any] = {
         "method": "delete",
-        "url": f"/api/v1/mcp/endpoints/{mcpendpoint_id}",
+        "url": "/api/v1/mcp/endpoints/{mcpendpoint_id}".format(
+            mcpendpoint_id=quote(str(mcpendpoint_id), safe=""),
+        ),
     }
 
     return _kwargs

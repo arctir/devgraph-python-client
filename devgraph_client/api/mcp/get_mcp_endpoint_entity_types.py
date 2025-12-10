@@ -1,5 +1,6 @@
 from http import HTTPStatus
 from typing import Any, cast
+from urllib.parse import quote
 
 import httpx
 
@@ -28,7 +29,9 @@ def _get_kwargs(
 
     _kwargs: dict[str, Any] = {
         "method": "get",
-        "url": f"/api/v1/mcp/endpoints/{mcpendpoint_name}/entity-types",
+        "url": "/api/v1/mcp/endpoints/{mcpendpoint_name}/entity-types".format(
+            mcpendpoint_name=quote(str(mcpendpoint_name), safe=""),
+        ),
         "params": params,
     }
 
