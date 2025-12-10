@@ -134,10 +134,16 @@ from .relation_metadata_labels import RelationMetadataLabels
 from .renderer_manifest import RendererManifest
 from .response_format import ResponseFormat
 from .response_format_type import ResponseFormatType
+from .scope_info import ScopeInfo
+from .scopes_response import ScopesResponse
+from .scopes_response_resource_groups import ScopesResponseResourceGroups
+from .scopes_response_roles import ScopesResponseRoles
+from .scopes_response_scopes import ScopesResponseScopes
 from .subscription_response import SubscriptionResponse
 from .text_block import TextBlock
 from .thinking_block import ThinkingBlock
 from .thinking_block_additional_information import ThinkingBlockAdditionalInformation
+from .token_introspection_response import TokenIntrospectionResponse
 from .tool_call_block import ToolCallBlock
 from .tool_call_block_tool_kwargs_type_0 import ToolCallBlockToolKwargsType0
 from .typed_chat_message_content import TypedChatMessageContent
@@ -284,10 +290,16 @@ __all__ = (
     "RendererManifest",
     "ResponseFormat",
     "ResponseFormatType",
+    "ScopeInfo",
+    "ScopesResponse",
+    "ScopesResponseResourceGroups",
+    "ScopesResponseRoles",
+    "ScopesResponseScopes",
     "SubscriptionResponse",
     "TextBlock",
     "ThinkingBlock",
     "ThinkingBlockAdditionalInformation",
+    "TokenIntrospectionResponse",
     "ToolCallBlock",
     "ToolCallBlockToolKwargsType0",
     "TypedChatMessageContent",
